@@ -20,8 +20,8 @@
         <p class="text-white/60 mb-10 max-w-xl mx-auto text-lg">
           Productos orgánicos frescos, cultivados con amor y entregados directamente a su puerta.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <NuxtLink to="/productos" class="btn-primary text-base">Ver Productos</NuxtLink>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <NuxtLink to="/productos" class="btn-primary text-base border-2 border-white">Ver Productos</NuxtLink>
           <NuxtLink to="/lista-precios" class="border-2 border-white/40 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors duration-200 text-base">
             Lista de Precios
           </NuxtLink>

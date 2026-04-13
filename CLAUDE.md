@@ -33,7 +33,9 @@ Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`)
 
 **Layout** is in `layouts/default.vue` (Navbar + `<slot />` + Footer + floating WhatsApp button). `app.vue` is just a thin `<NuxtLayout><NuxtPage /></NuxtLayout>` shell. The nav link list is duplicated between `components/Navbar.vue` and `components/Footer.vue` — keep them in sync when adding routes. Components are auto-imported by Nuxt.
 
-**Styling uses Tailwind CSS 4** (via `@nuxt/ui`). Brand tokens are declared as CSS custom properties in `assets/css/main.css` under `@theme {}` — there is no `tailwind.config.js`. Reusable utility classes (`btn-primary`, `btn-accent`, `card`, `section-title`, `section-subtitle`, `page-hero`) are defined as `@layer components` in the same file.
+**Styling uses Tailwind CSS 4** (via `@nuxt/ui`). Brand tokens are declared as CSS custom properties in `assets/css/main.css` under `@theme {}` — there is no `tailwind.config.js`. Reusable utility classes (`btn-primary`, `btn-accent`, `card`, `section-title`, `section-subtitle`, `page-hero`) are defined as `@layer utilities` in the same file.
+
+> **Known conflict:** `@layer components` is silently ignored at runtime when using Tailwind 4 + `@nuxt/ui` (styles compile but produce no padding/background). Always use `@layer utilities` or plain CSS with `var(--color-*)` tokens for custom classes. Never use `@layer components`.
 
 **Icons use `UIcon`** (Nuxt UI / Iconify). Use `heroicons:*` for general UI icons and `simple-icons:*` for brand icons (WhatsApp, Instagram, Facebook). Never use PrimeIcons — that dependency was removed.
 

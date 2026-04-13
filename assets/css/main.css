@@ -25,13 +25,29 @@
   }
 }
 
-@layer components {
+@layer utilities {
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-200 inline-block;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.2s;
+    &:hover { background-color: var(--color-secondary); }
   }
 
   .btn-accent {
-    @apply bg-accent text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity duration-200 inline-block;
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    transition: opacity 0.2s;
+    &:hover { opacity: 0.9; }
   }
 
   .section-title {
@@ -47,6 +63,9 @@
   }
 
   .page-hero {
-    @apply bg-primary text-white py-20 px-4 text-center;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
   }
 }
