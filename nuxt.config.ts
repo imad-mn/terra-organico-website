@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       nodeCompat: true
     },
     prerender: {
+      autoSubfolderIndex: false,
       routes: [
         '/',
         '/quienes-somos',
