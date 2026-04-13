@@ -26,7 +26,7 @@
         </div>
         <div class="rounded-2xl bg-primary/10 h-72 flex items-center justify-center">
           <div class="text-center text-primary/40">
-            <i class="pi pi-image text-6xl mb-3"></i>
+            <UIcon name="heroicons:photo" class="w-16 h-16 mx-auto mb-3" />
             <p class="text-sm">Foto del equipo / huerto</p>
           </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div v-for="val in values" :key="val.title" class="card text-center">
             <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" :class="val.bg">
-              <i :class="val.icon" class="text-2xl" :style="{ color: val.color }"></i>
+              <UIcon :name="val.icon" class="w-6 h-6" :style="{ color: val.color }" />
             </div>
             <h4 class="font-heading font-bold text-lg text-dark mb-2">{{ val.title }}</h4>
             <p class="text-sm text-dark/60 leading-relaxed">{{ val.desc }}</p>
@@ -75,28 +75,28 @@
 <script setup>
 const values = [
   {
-    icon: 'pi pi-globe',
+    icon: 'heroicons:globe-alt',
     title: 'Naturaleza',
     desc: 'Cultivamos respetando los ciclos naturales y cuidando el suelo para generaciones futuras.',
     bg: 'bg-green-100',
     color: '#2D6A2D',
   },
   {
-    icon: 'pi pi-heart',
+    icon: 'heroicons:heart',
     title: 'Salud',
     desc: 'Alimentos libres de químicos para el bienestar de su familia y la nuestra.',
     bg: 'bg-red-100',
     color: '#e55050',
   },
   {
-    icon: 'pi pi-users',
+    icon: 'heroicons:users',
     title: 'Comunidad',
     desc: 'Apoyamos al productor local y construimos relaciones de largo plazo con nuestros clientes.',
     bg: 'bg-amber-100',
     color: '#8B5E3C',
   },
   {
-    icon: 'pi pi-shield',
+    icon: 'heroicons:shield-check',
     title: 'Confianza',
     desc: 'Transparencia en cada proceso, desde la siembra hasta la entrega en su puerta.',
     bg: 'bg-blue-100',

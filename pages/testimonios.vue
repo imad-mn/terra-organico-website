@@ -13,7 +13,7 @@
             :key="i"
             class="card flex flex-col gap-4"
           >
-            <i class="pi pi-comment text-3xl text-primary/30"></i>
+            <UIcon name="heroicons:chat-bubble-left" class="w-8 h-8 text-primary/30" />
             <blockquote class="font-heading text-lg italic text-dark/80 leading-relaxed flex-1">
               "{{ t.quote }}"
             </blockquote>
@@ -30,8 +30,8 @@
     <section class="bg-primary/5 py-12 px-4 text-center">
       <h3 class="font-heading text-2xl font-bold text-primary mb-3">¿Ya es cliente?</h3>
       <p class="text-dark/60 mb-6">Comparta su experiencia con nosotros por WhatsApp.</p>
-      <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="btn-primary">
-        <i class="pi pi-whatsapp mr-2"></i>Enviar mi testimonio
+      <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
+        <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Enviar mi testimonio
       </a>
     </section>
   </div>

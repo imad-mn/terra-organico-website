@@ -18,10 +18,10 @@
               @click="toggle(i)"
             >
               <span class="font-semibold text-dark pr-4">{{ faq.question }}</span>
-              <i
-                class="pi text-primary flex-shrink-0 transition-transform duration-200"
-                :class="open === i ? 'pi-minus rotate-0' : 'pi-plus'"
-              ></i>
+              <UIcon
+                :name="open === i ? 'heroicons:minus' : 'heroicons:plus'"
+                class="text-primary flex-shrink-0 w-5 h-5 transition-transform duration-200"
+              />
             </button>
             <Transition
               enter-active-class="transition-all duration-200 ease-out"
@@ -40,8 +40,8 @@
 
         <div class="mt-12 card text-center">
           <p class="text-dark/70 mb-4">¿No encontró su respuesta? Escríbanos directamente.</p>
-          <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="btn-primary">
-            <i class="pi pi-whatsapp mr-2"></i>Consultar por WhatsApp
+          <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
+            <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Consultar por WhatsApp
           </a>
         </div>
       </div>

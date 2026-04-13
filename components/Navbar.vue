@@ -2,16 +2,16 @@
   <header class="sticky top-0 z-50 bg-primary shadow-md">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <!-- Logo -->
-      <RouterLink to="/" class="flex items-center gap-3">
+      <NuxtLink to="/" class="flex items-center gap-3">
         <img src="/logo.png" alt="Terra Orgánico" class="h-12 w-12 rounded-full object-cover" />
         <span class="text-white font-heading font-bold text-xl leading-tight hidden sm:block">
           Terra Orgánico
         </span>
-      </RouterLink>
+      </NuxtLink>
 
       <!-- Desktop nav -->
       <nav class="hidden lg:flex items-center gap-1">
-        <RouterLink
+        <NuxtLink
           v-for="link in links"
           :key="link.to"
           :to="link.to"
@@ -19,7 +19,7 @@
           active-class="text-white bg-white/20"
         >
           {{ link.label }}
-        </RouterLink>
+        </NuxtLink>
       </nav>
 
       <!-- Mobile hamburger -->
@@ -28,7 +28,7 @@
         @click="menuOpen = !menuOpen"
         aria-label="Menú"
       >
-        <i :class="menuOpen ? 'pi pi-times' : 'pi pi-bars'" class="text-xl"></i>
+        <UIcon :name="menuOpen ? 'heroicons:x-mark' : 'heroicons:bars-3'" class="w-6 h-6" />
       </button>
     </div>
 
@@ -43,7 +43,7 @@
     >
       <div v-if="menuOpen" class="lg:hidden bg-primary border-t border-white/10 px-4 pb-4">
         <nav class="flex flex-col gap-1 pt-2">
-          <RouterLink
+          <NuxtLink
             v-for="link in links"
             :key="link.to"
             :to="link.to"
@@ -52,7 +52,7 @@
             @click="menuOpen = false"
           >
             {{ link.label }}
-          </RouterLink>
+          </NuxtLink>
         </nav>
       </div>
     </Transition>

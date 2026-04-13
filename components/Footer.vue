@@ -13,9 +13,9 @@
         <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Páginas</h4>
         <ul class="space-y-2 text-sm">
           <li v-for="link in links" :key="link.to">
-            <RouterLink :to="link.to" class="hover:text-white transition-colors">
+            <NuxtLink :to="link.to" class="hover:text-white transition-colors">
               {{ link.label }}
-            </RouterLink>
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -25,19 +25,19 @@
         <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Contacto</h4>
         <ul class="space-y-3 text-sm">
           <li class="flex items-center gap-2">
-            <i class="pi pi-whatsapp text-green-400"></i>
+            <UIcon name="simple-icons:whatsapp" class="text-green-400 w-4 h-4" />
             <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="hover:text-white transition-colors">+506 8853-2344</a>
           </li>
           <li class="flex items-center gap-2">
-            <i class="pi pi-envelope text-green-400"></i>
+            <UIcon name="heroicons:envelope" class="text-green-400 w-4 h-4" />
             <a href="mailto:terraorganicocr@gmail.com" class="hover:text-white transition-colors">terraorganicocr@gmail.com</a>
           </li>
           <li class="flex items-center gap-2">
-            <i class="pi pi-instagram text-green-400"></i>
+            <UIcon name="simple-icons:instagram" class="text-green-400 w-4 h-4" />
             <a href="https://instagram.com/terraorganicocr" target="_blank" rel="noopener" class="hover:text-white transition-colors">@terraorganicocr</a>
           </li>
           <li class="flex items-center gap-2">
-            <i class="pi pi-facebook text-green-400"></i>
+            <UIcon name="simple-icons:facebook" class="text-green-400 w-4 h-4" />
             <a href="https://facebook.com/terraorganicocr" target="_blank" rel="noopener" class="hover:text-white transition-colors">Terra Orgánico</a>
           </li>
         </ul>

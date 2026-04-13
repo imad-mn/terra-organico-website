@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --color-primary: #2D6A2D;
+  --color-secondary: #4A7C3F;
+  --color-accent: #8B5E3C;
+  --color-khaki: #E8E0C8;
+  --color-dark: #1E2D1E;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Lato", sans-serif;
+}
 
 @layer base {
   html {
@@ -40,17 +49,4 @@
   .page-hero {
     @apply bg-primary text-white py-20 px-4 text-center;
   }
-}
-
-/* PrimeVue overrides */
-.p-accordion .p-accordion-header .p-accordion-header-link {
-  background: transparent !important;
-  border-color: #2D6A2D !important;
-  color: #1E2D1E !important;
-  font-family: 'Lato', sans-serif;
-}
-
-.p-accordion .p-accordion-content {
-  background: transparent !important;
-  border-color: #2D6A2D !important;
 }

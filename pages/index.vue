@@ -21,10 +21,10 @@
           Productos orgánicos frescos, cultivados con amor y entregados directamente a su puerta.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <RouterLink to="/productos" class="btn-primary text-base">Ver Productos</RouterLink>
-          <RouterLink to="/lista-precios" class="border-2 border-white/40 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors duration-200 text-base">
+          <NuxtLink to="/productos" class="btn-primary text-base">Ver Productos</NuxtLink>
+          <NuxtLink to="/lista-precios" class="border-2 border-white/40 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors duration-200 text-base">
             Lista de Precios
-          </RouterLink>
+          </NuxtLink>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div v-for="feat in features" :key="feat.title" class="card text-center hover:shadow-md transition-shadow">
             <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <i :class="feat.icon" class="text-3xl text-primary"></i>
+              <UIcon :name="feat.icon" class="w-8 h-8 text-primary" />
             </div>
             <h3 class="font-heading text-xl font-bold text-primary mb-2">{{ feat.title }}</h3>
             <p class="text-dark/70 text-sm leading-relaxed">{{ feat.desc }}</p>
@@ -63,7 +63,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div v-for="prod in featured" :key="prod.name" class="card hover:shadow-lg transition-shadow group cursor-default">
             <div class="h-36 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
-              <i :class="prod.icon" class="text-5xl text-primary/60"></i>
+              <UIcon :name="prod.icon" class="w-12 h-12 text-primary/60" />
             </div>
             <h4 class="font-semibold text-dark mb-1">{{ prod.name }}</h4>
             <p class="text-sm text-dark/60 mb-3">{{ prod.desc }}</p>
@@ -71,7 +71,7 @@
           </div>
         </div>
         <div class="text-center mt-10">
-          <RouterLink to="/productos" class="btn-primary">Ver todos los productos</RouterLink>
+          <NuxtLink to="/productos" class="btn-primary">Ver todos los productos</NuxtLink>
         </div>
       </div>
     </section>
@@ -79,14 +79,14 @@
     <!-- Testimonio teaser -->
     <section class="py-16 px-4">
       <div class="max-w-2xl mx-auto text-center">
-        <i class="pi pi-comment text-4xl text-primary/30 mb-4"></i>
+        <UIcon name="heroicons:chat-bubble-left" class="w-10 h-10 text-primary/30 mx-auto mb-4" />
         <blockquote class="font-heading text-2xl text-dark/80 italic leading-relaxed mb-6">
           "Desde que empecé a pedir con Terra Orgánico, noto la diferencia en el sabor y la frescura. ¡Los tomates parecen recién cosechados!"
         </blockquote>
         <p class="text-dark/50 font-medium">— María González, San José</p>
-        <RouterLink to="/testimonios" class="mt-6 inline-block text-primary font-semibold hover:underline">
+        <NuxtLink to="/testimonios" class="mt-6 inline-block text-primary font-semibold hover:underline">
           Leer más testimonios →
-        </RouterLink>
+        </NuxtLink>
       </div>
     </section>
 
@@ -95,11 +95,11 @@
       <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">¿Listo para pedir?</h2>
       <p class="text-white/80 mb-8 max-w-md mx-auto">Revise nuestra lista de precios y haga su pedido por WhatsApp.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <RouterLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors">
+        <NuxtLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors">
           Ver Lista de Precios
-        </RouterLink>
-        <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
-          <i class="pi pi-whatsapp mr-2"></i>Pedir por WhatsApp
+        </NuxtLink>
+        <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+          <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Pedir por WhatsApp
         </a>
       </div>
     </section>
@@ -109,26 +109,26 @@
 <script setup>
 const features = [
   {
-    icon: 'pi pi-verified',
+    icon: 'heroicons:check-badge',
     title: '100% Orgánico',
     desc: 'Todos nuestros productos son cultivados sin pesticidas ni químicos artificiales, respetando la naturaleza.',
   },
   {
-    icon: 'pi pi-sun',
+    icon: 'heroicons:sun',
     title: 'Siempre Fresco',
     desc: 'Cosechamos y entregamos en el mismo ciclo para que usted reciba los productos en su punto óptimo.',
   },
   {
-    icon: 'pi pi-home',
+    icon: 'heroicons:home',
     title: 'Entrega a Domicilio',
     desc: 'Llevamos sus productos directamente a su puerta en los días de entrega establecidos en su zona.',
   },
 ]
 
 const featured = [
-  { name: 'Tomates Cherry',    icon: 'pi pi-circle-fill', desc: 'Variedad orgánica dulce', price: '₡1,200/libra' },
-  { name: 'Lechuga Romana',    icon: 'pi pi-align-left',  desc: 'Fresca y crujiente',      price: '₡800/unidad'  },
-  { name: 'Zanahorias',        icon: 'pi pi-bolt',        desc: 'Ricas en betacaroteno',   price: '₡900/libra'   },
-  { name: 'Manzanas Fuji',     icon: 'pi pi-circle',      desc: 'Importadas y orgánicas',  price: '₡1,500/libra' },
+  { name: 'Tomates Cherry',    icon: 'heroicons:circle-stack',          desc: 'Variedad orgánica dulce', price: '₡1,200/libra' },
+  { name: 'Lechuga Romana',    icon: 'heroicons:bars-3-bottom-left',    desc: 'Fresca y crujiente',      price: '₡800/unidad'  },
+  { name: 'Zanahorias',        icon: 'heroicons:bolt',                  desc: 'Ricas en betacaroteno',   price: '₡900/libra'   },
+  { name: 'Manzanas Fuji',     icon: 'heroicons:ellipsis-horizontal-circle', desc: 'Importadas y orgánicas', price: '₡1,500/libra' },
 ]
 </script>

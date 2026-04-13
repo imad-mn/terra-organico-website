@@ -10,7 +10,7 @@
 
         <!-- Info callout -->
         <div class="card border-l-4 border-primary flex gap-4">
-          <i class="pi pi-info-circle text-2xl text-primary flex-shrink-0 mt-0.5"></i>
+          <UIcon name="heroicons:information-circle" class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
           <div>
             <h3 class="font-semibold text-dark mb-1">Fecha límite de pedidos</h3>
             <p class="text-dark/70 text-sm leading-relaxed">
@@ -55,7 +55,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="card">
             <h4 class="font-heading font-bold text-primary mb-3 flex items-center gap-2">
-              <i class="pi pi-truck"></i> Envío Gratis
+              <UIcon name="heroicons:truck" class="w-5 h-5" /> Envío Gratis
             </h4>
             <p class="text-dark/70 text-sm leading-relaxed">
               Pedidos superiores a <strong>₡15,000</strong> tienen envío gratis en todas las zonas de la Gran Área Metropolitana.
@@ -63,7 +63,7 @@
           </div>
           <div class="card">
             <h4 class="font-heading font-bold text-accent mb-3 flex items-center gap-2">
-              <i class="pi pi-map-marker"></i> Otras Zonas
+              <UIcon name="heroicons:map-pin" class="w-5 h-5" /> Otras Zonas
             </h4>
             <p class="text-dark/70 text-sm leading-relaxed">
               Si su zona no aparece en la lista, escríbanos por WhatsApp. Evaluamos rutas especiales con tarifa personalizada.
@@ -78,15 +78,15 @@
 
 <script setup>
 const zones = [
-  { name: 'San José Centro',    day: 'Martes y Viernes',  days: '1–2 días hábiles', cost: 'GRATIS',   free: true  },
-  { name: 'Escazú / Santa Ana', day: 'Miércoles',         days: '2 días hábiles',   cost: '₡500',     free: false },
-  { name: 'Heredia Centro',     day: 'Martes',            days: '1–2 días hábiles', cost: 'GRATIS',   free: true  },
-  { name: 'San Pablo / Barva',  day: 'Jueves',            days: '2 días hábiles',   cost: '₡500',     free: false },
-  { name: 'Alajuela Centro',    day: 'Miércoles',         days: '2 días hábiles',   cost: 'GRATIS',   free: true  },
-  { name: 'Grecia / Naranjo',   day: 'Viernes',           days: '3 días hábiles',   cost: '₡1,000',   free: false },
-  { name: 'Cartago Centro',     day: 'Jueves',            days: '2 días hábiles',   cost: '₡500',     free: false },
-  { name: 'Tres Ríos / La Unión',day: 'Martes',           days: '1–2 días hábiles', cost: 'GRATIS',   free: true  },
-  { name: 'Desamparados',       day: 'Miércoles',         days: '2 días hábiles',   cost: '₡500',     free: false },
-  { name: 'Curridabat',         day: 'Martes y Jueves',   days: '1 día hábil',      cost: 'GRATIS',   free: true  },
+  { name: 'San José Centro',     day: 'Martes y Viernes',  days: '1–2 días hábiles', cost: 'GRATIS',   free: true  },
+  { name: 'Escazú / Santa Ana',  day: 'Miércoles',         days: '2 días hábiles',   cost: '₡500',     free: false },
+  { name: 'Heredia Centro',      day: 'Martes',            days: '1–2 días hábiles', cost: 'GRATIS',   free: true  },
+  { name: 'San Pablo / Barva',   day: 'Jueves',            days: '2 días hábiles',   cost: '₡500',     free: false },
+  { name: 'Alajuela Centro',     day: 'Miércoles',         days: '2 días hábiles',   cost: 'GRATIS',   free: true  },
+  { name: 'Grecia / Naranjo',    day: 'Viernes',           days: '3 días hábiles',   cost: '₡1,000',   free: false },
+  { name: 'Cartago Centro',      day: 'Jueves',            days: '2 días hábiles',   cost: '₡500',     free: false },
+  { name: 'Tres Ríos / La Unión',day: 'Martes',            days: '1–2 días hábiles', cost: 'GRATIS',   free: true  },
+  { name: 'Desamparados',        day: 'Miércoles',         days: '2 días hábiles',   cost: '₡500',     free: false },
+  { name: 'Curridabat',          day: 'Martes y Jueves',   days: '1 día hábil',      cost: 'GRATIS',   free: true  },
 ]
 </script>

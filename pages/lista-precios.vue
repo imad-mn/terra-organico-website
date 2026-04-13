@@ -26,7 +26,7 @@
             </button>
           </div>
           <button @click="printPage" class="btn-accent text-sm flex items-center gap-2">
-            <i class="pi pi-print"></i> Imprimir / PDF
+            <UIcon name="heroicons:printer" class="w-4 h-4" /> Imprimir / PDF
           </button>
         </div>
 
