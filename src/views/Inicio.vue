@@ -98,7 +98,7 @@
         <RouterLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors">
           Ver Lista de Precios
         </RouterLink>
-        <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+        <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
           <i class="pi pi-whatsapp mr-2"></i>Pedir por WhatsApp
         </a>
       </div>

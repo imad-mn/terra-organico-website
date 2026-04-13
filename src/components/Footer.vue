@@ -26,19 +26,19 @@
         <ul class="space-y-3 text-sm">
           <li class="flex items-center gap-2">
             <i class="pi pi-whatsapp text-green-400"></i>
-            <span>+506 0000-0000</span>
+            <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="hover:text-white transition-colors">+506 8853-2344</a>
           </li>
           <li class="flex items-center gap-2">
             <i class="pi pi-envelope text-green-400"></i>
-            <span>info@terraorganico.com</span>
+            <a href="mailto:terraorganicocr@gmail.com" class="hover:text-white transition-colors">terraorganicocr@gmail.com</a>
           </li>
           <li class="flex items-center gap-2">
             <i class="pi pi-instagram text-green-400"></i>
-            <span>@terraorganico</span>
+            <a href="https://instagram.com/terraorganicocr" target="_blank" rel="noopener" class="hover:text-white transition-colors">@terraorganicocr</a>
           </li>
           <li class="flex items-center gap-2">
             <i class="pi pi-facebook text-green-400"></i>
-            <span>Terra Orgánico</span>
+            <a href="https://facebook.com/terraorganicocr" target="_blank" rel="noopener" class="hover:text-white transition-colors">Terra Orgánico</a>
           </li>
         </ul>
       </div>

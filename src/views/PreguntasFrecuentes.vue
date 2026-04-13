@@ -40,7 +40,7 @@
 
         <div class="mt-12 card text-center">
           <p class="text-dark/70 mb-4">¿No encontró su respuesta? Escríbanos directamente.</p>
-          <a href="https://wa.me/50600000000" target="_blank" rel="noopener" class="btn-primary">
+          <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="btn-primary">
             <i class="pi pi-whatsapp mr-2"></i>Consultar por WhatsApp
           </a>
         </div>
