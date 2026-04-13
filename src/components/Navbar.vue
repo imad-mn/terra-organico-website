@@ -1,0 +1,76 @@
+<template>
+  <header class="sticky top-0 z-50 bg-primary shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <RouterLink to="/" class="flex items-center gap-3">
+        <img src="/logo.png" alt="Terra Orgánico" class="h-12 w-12 rounded-full object-cover" />
+        <span class="text-white font-heading font-bold text-xl leading-tight hidden sm:block">
+          Terra Orgánico
+        </span>
+      </RouterLink>
+
+      <!-- Desktop nav -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <RouterLink
+          v-for="link in links"
+          :key="link.to"
+          :to="link.to"
+          class="text-white/80 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-150"
+          active-class="text-white bg-white/20"
+        >
+          {{ link.label }}
+        </RouterLink>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+        @click="menuOpen = !menuOpen"
+        aria-label="Menú"
+      >
+        <i :class="menuOpen ? 'pi pi-times' : 'pi pi-bars'" class="text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <Transition
+      enter-active-class="transition-all duration-200 ease-out"
+      enter-from-class="opacity-0 -translate-y-2"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition-all duration-150 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 -translate-y-2"
+    >
+      <div v-if="menuOpen" class="lg:hidden bg-primary border-t border-white/10 px-4 pb-4">
+        <nav class="flex flex-col gap-1 pt-2">
+          <RouterLink
+            v-for="link in links"
+            :key="link.to"
+            :to="link.to"
+            class="text-white/80 hover:text-white hover:bg-white/10 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors"
+            active-class="text-white bg-white/20"
+            @click="menuOpen = false"
+          >
+            {{ link.label }}
+          </RouterLink>
+        </nav>
+      </div>
+    </Transition>
+  </header>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const menuOpen = ref(false)
+
+const links = [
+  { to: '/',                     label: 'Inicio' },
+  { to: '/quienes-somos',        label: 'Quiénes Somos' },
+  { to: '/productos',            label: 'Productos' },
+  { to: '/testimonios',          label: 'Testimonios' },
+  { to: '/preguntas-frecuentes', label: 'Preguntas Frecuentes' },
+  { to: '/costos-envio',         label: 'Costos de Envío' },
+  { to: '/lista-precios',        label: 'Lista de Precios' },
+]
+</script>

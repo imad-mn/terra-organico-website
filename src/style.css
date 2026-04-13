@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-khaki text-dark font-body;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-secondary transition-colors duration-200 inline-block;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity duration-200 inline-block;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold text-primary mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-dark/70 mb-10;
+  }
+
+  .card {
+    @apply bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-white/80;
+  }
+
+  .page-hero {
+    @apply bg-primary text-white py-20 px-4 text-center;
+  }
+}
+
+/* PrimeVue overrides */
+.p-accordion .p-accordion-header .p-accordion-header-link {
+  background: transparent !important;
+  border-color: #2D6A2D !important;
+  color: #1E2D1E !important;
+  font-family: 'Lato', sans-serif;
+}
+
+.p-accordion .p-accordion-content {
+  background: transparent !important;
+  border-color: #2D6A2D !important;
+}
