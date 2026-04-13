@@ -3,11 +3,6 @@ export default defineNuxtConfig({
   ssr: false,
   modules: ['@nuxt/ui'],
   nitro: {
-    preset: "cloudflare_module",
-    cloudflare: {
-      deployConfig: false,
-      nodeCompat: true
-    },
     prerender: {
       autoSubfolderIndex: false,
       routes: [
