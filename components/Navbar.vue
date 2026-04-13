@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 bg-primary shadow-md">
+  <header class="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-3">
@@ -65,12 +65,12 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 
 const links = [
-  { to: '/',                     label: 'Inicio' },
-  { to: '/quienes-somos',        label: 'Quiénes Somos' },
-  { to: '/productos',            label: 'Productos' },
-  { to: '/testimonios',          label: 'Testimonios' },
-  { to: '/preguntas-frecuentes', label: 'Preguntas Frecuentes' },
-  { to: '/costos-envio',         label: 'Costos de Envío' },
-  { to: '/lista-precios',        label: 'Lista de Precios' },
+  { to: '/',                     label: '🏠 Inicio' },
+  { to: '/quienes-somos',        label: '👥 Quiénes somos' },
+  { to: '/productos',            label: '🥦 Productos' },
+  { to: '/testimonios',          label: '⭐ Testimonios' },
+  { to: '/preguntas-frecuentes', label: '❓ Preguntas Frecuentes' },
+  { to: '/costos-envio',         label: '🚚 Envíos' },
+  { to: '/lista-precios',        label: '🏷️ Precios' },
 ]
 </script>

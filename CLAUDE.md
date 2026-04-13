@@ -31,13 +31,17 @@ Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`)
 
 **Data lives in the pages.** Each page component contains its own data as a plain JS array in `<script setup>` — there is no store, no API, and no external data source. To update products, prices, delivery zones, or testimonials, edit the relevant array directly in the corresponding page file.
 
-**Layout** is in `layouts/default.vue` (Navbar + `<slot />` + Footer + floating WhatsApp button). `app.vue` is just a thin `<NuxtLayout><NuxtPage /></NuxtLayout>` shell. The nav link list is duplicated between `components/Navbar.vue` and `components/Footer.vue` — keep them in sync when adding routes. Components are auto-imported by Nuxt.
+**Layout** is in `layouts/default.vue` (Navbar + `<slot />` + Footer + floating WhatsApp button). `app.vue` is just a thin `<NuxtLayout><NuxtPage /></NuxtLayout>` shell. The nav link list lives in `components/Navbar.vue` — the Footer no longer duplicates it (it was simplified to brand + contact only). Components are auto-imported by Nuxt.
 
 **Styling uses Tailwind CSS 4** (via `@nuxt/ui`). Brand tokens are declared as CSS custom properties in `assets/css/main.css` under `@theme {}` — there is no `tailwind.config.js`. Reusable utility classes (`btn-primary`, `btn-accent`, `card`, `section-title`, `section-subtitle`, `page-hero`) are defined as `@layer utilities` in the same file.
 
 > **Known conflict:** `@layer components` is silently ignored at runtime when using Tailwind 4 + `@nuxt/ui` (styles compile but produce no padding/background). Always use `@layer utilities` or plain CSS with `var(--color-*)` tokens for custom classes. Never use `@layer components`.
 
 **Icons use `UIcon`** (Nuxt UI / Iconify). Use `heroicons:*` for general UI icons and `simple-icons:*` for brand icons (WhatsApp, Instagram, Facebook). Never use PrimeIcons — that dependency was removed.
+
+**Images** are loaded from Unsplash CDN (`https://images.unsplash.com/photo-{id}?auto=format&fit=crop&w=…&q=80`). Hero sections use full-width background images with a colored overlay (`absolute inset-0`). Product cards use `h-48 overflow-hidden` image thumbnails. Text over images uses `drop-shadow-lg` or inline `text-shadow` for legibility.
+
+**Tone** is casual and warm (tuteo, emojis in nav labels and headings). Navbar links include emojis: 🏠 Inicio, 👥 Quiénes somos, 🥦 Productos, ⭐ Testimonios, ❓ Preguntas Frecuentes, 🚚 Envíos, 🏷️ Precios.
 
 ## Brand
 
@@ -49,7 +53,7 @@ Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`)
 | `khaki` | `--color-khaki` | `#E8E0C8` | Page background |
 | `dark` | `--color-dark` | `#1E2D1E` | Body text |
 
-Fonts: **Playfair Display** (`font-heading`) + **Lato** (`font-body`), loaded from Google Fonts via `nuxt.config.ts` `app.head.link`.
+Fonts: **Nunito** (`font-heading`) + **Nunito Sans** (`font-body`), loaded from Google Fonts via `nuxt.config.ts` `app.head.link`.
 
 ## Key details
 

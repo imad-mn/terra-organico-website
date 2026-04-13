@@ -5,7 +5,7 @@
       <p class="text-white/70 text-lg max-w-xl mx-auto">Precios vigentes — actualizados semanalmente</p>
     </section>
 
-    <section class="py-20 px-4">
+    <section class="py-10 px-4">
       <div class="max-w-4xl mx-auto space-y-10">
 
         <!-- Controls -->
@@ -25,9 +25,6 @@
               {{ cat }}
             </button>
           </div>
-          <button @click="printPage" class="btn-accent text-sm flex items-center gap-2">
-            <UIcon name="heroicons:printer" class="w-4 h-4" /> Imprimir / PDF
-          </button>
         </div>
 
         <!-- Price table -->
@@ -62,8 +59,8 @@
           </table>
         </div>
 
-        <p class="text-center text-dark/40 text-xs mt-4">
-          * Precios en colones costarricenses (₡) con IVA incluido. Sujetos a cambio sin previo aviso según disponibilidad.
+        <p class="text-center text-dark/40 mt-4">
+          * Precios en colones costarricenses (₡). Sujetos a cambio sin previo aviso según disponibilidad.
         </p>
       </div>
     </section>

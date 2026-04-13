@@ -1,28 +1,30 @@
 <template>
   <div>
-    <!-- Hero -->
-    <section
-      class="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden"
-      style="background: linear-gradient(135deg, #1a4a1a 0%, #2D6A2D 50%, #4A7C3F 100%)"
-    >
-      <!-- Decorative circles -->
-      <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-white/5 blur-xl"></div>
-      <div class="absolute bottom-20 right-10 w-64 h-64 rounded-full bg-white/5 blur-2xl"></div>
+    <!-- Hero con foto de fondo -->
+    <section class="relative min-h-[92vh] flex items-center justify-center text-center overflow-hidden">
+      <!-- Foto de fondo -->
+      <img
+        src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1600&q=80"
+        alt="Verduras frescas orgánicas"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- Overlay verde -->
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(26,74,26,0.82) 0%, rgba(45,106,45,0.75) 50%, rgba(74,124,63,0.70) 100%)"></div>
 
       <div class="relative z-10 px-4 max-w-3xl mx-auto">
-        <img src="/logo.png" alt="Terra Orgánico" class="h-28 w-28 mx-auto rounded-full object-cover shadow-2xl mb-8 border-4 border-white/20" />
-        <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-4 leading-tight">
+        <img src="/logo.png" alt="Terra Orgánico" class="h-24 w-24 mx-auto rounded-full object-cover shadow-2xl mb-6 border-4 border-white/30" />
+        <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-4 leading-tight drop-shadow-lg">
           Terra Orgánico
         </h1>
-        <p class="text-xl md:text-2xl text-white/80 mb-4 italic font-light">
-          De la tierra a su hogar
+        <p class="text-2xl md:text-3xl text-white/90 mb-3 font-light" style="font-family: 'Nunito', sans-serif;">
+          De la tierra a su hogar 🌱
         </p>
-        <p class="text-white/60 mb-10 max-w-xl mx-auto text-lg">
-          Productos orgánicos frescos, cultivados con amor y entregados directamente a su puerta.
+        <p class="text-white mb-10 max-w-3xl mx-auto text-lg leading-relaxed" style="text-shadow: 0 1px 6px rgba(0,0,0,0.55)">
+          Verduras, frutas y más, entregados fresquecitos directo a tu puerta.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <NuxtLink to="/productos" class="btn-primary text-base border-2 border-white">Ver Productos</NuxtLink>
-          <NuxtLink to="/lista-precios" class="border-2 border-white/40 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors duration-200 text-base">
+          <NuxtLink to="/productos" class="btn-primary text-base shadow-lg">Ver Productos</NuxtLink>
+          <NuxtLink to="/lista-precios" class="border-2 border-white/50 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors duration-200 text-base backdrop-blur-sm">
             Lista de Precios
           </NuxtLink>
         </div>
@@ -36,16 +38,14 @@
       </div>
     </section>
 
-    <!-- Por qué elegirnos -->
+    <!-- Por qué somos diferentes -->
     <section class="py-20 px-4">
       <div class="max-w-6xl mx-auto text-center">
-        <h2 class="section-title">¿Por qué elegirnos?</h2>
-        <p class="section-subtitle">Comprometidos con su salud y la del planeta</p>
+        <h2 class="section-title">¿Por qué somos diferentes?</h2>
+        <p class="section-subtitle">Porque la comida buena empieza desde la raíz</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div v-for="feat in features" :key="feat.title" class="card text-center hover:shadow-md transition-shadow">
-            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <UIcon :name="feat.icon" class="w-8 h-8 text-primary" />
-            </div>
+            <div class="text-4xl mb-4">{{ feat.emoji }}</div>
             <h3 class="font-heading text-xl font-bold text-primary mb-2">{{ feat.title }}</h3>
             <p class="text-dark/70 text-sm leading-relaxed">{{ feat.desc }}</p>
           </div>
@@ -53,21 +53,37 @@
       </div>
     </section>
 
-    <!-- Productos destacados -->
+    <!-- Foto intermedia tipo lifestyle -->
+    <section class="relative h-64 md:h-80 overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1600&q=80"
+        alt="Mercado de frutas y verduras"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-primary/40 flex items-center justify-center">
+        <p class="text-white text-2xl md:text-4xl font-heading font-bold text-center drop-shadow-lg px-4">
+          "Fresco de verdad, no de nevera" 🥬
+        </p>
+      </div>
+    </section>
+
+    <!-- Productos destacados con fotos -->
     <section class="py-16 px-4 bg-primary/5">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="section-title">Productos Destacados</h2>
-          <p class="section-subtitle">Selección de lo mejor de nuestra cosecha</p>
+          <h2 class="section-title">Lo más pedido 🛒</h2>
+          <p class="section-subtitle">Lo que nuestros clientes no pueden dejar de pedir</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div v-for="prod in featured" :key="prod.name" class="card hover:shadow-lg transition-shadow group cursor-default">
-            <div class="h-36 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
-              <UIcon :name="prod.icon" class="w-12 h-12 text-primary/60" />
+          <div v-for="prod in featured" :key="prod.name" class="card hover:shadow-lg transition-all hover:-translate-y-1 cursor-default overflow-hidden !p-0">
+            <div class="h-40 overflow-hidden rounded-t-2xl">
+              <img :src="prod.img" :alt="prod.name" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
             </div>
-            <h4 class="font-semibold text-dark mb-1">{{ prod.name }}</h4>
-            <p class="text-sm text-dark/60 mb-3">{{ prod.desc }}</p>
-            <span class="text-accent font-bold">{{ prod.price }}</span>
+            <div class="p-4">
+              <h4 class="font-semibold text-dark mb-1">{{ prod.name }}</h4>
+              <p class="text-sm text-dark/60 mb-3">{{ prod.desc }}</p>
+              <span class="text-accent font-bold">{{ prod.price }}</span>
+            </div>
           </div>
         </div>
         <div class="text-center mt-10">
@@ -76,31 +92,39 @@
       </div>
     </section>
 
-    <!-- Testimonio teaser -->
+    <!-- Testimonio -->
     <section class="py-16 px-4">
       <div class="max-w-2xl mx-auto text-center">
-        <UIcon name="heroicons:chat-bubble-left" class="w-10 h-10 text-primary/30 mx-auto mb-4" />
+        <div class="text-5xl mb-4">💬</div>
         <blockquote class="font-heading text-2xl text-dark/80 italic leading-relaxed mb-6">
-          "Desde que empecé a pedir con Terra Orgánico, noto la diferencia en el sabor y la frescura. ¡Los tomates parecen recién cosechados!"
+          "¡Los tomates de Terra Orgánico saben como los que hacía mi abuela! Una diferencia total con los del súper."
         </blockquote>
         <p class="text-dark/50 font-medium">— María González, San José</p>
         <NuxtLink to="/testimonios" class="mt-6 inline-block text-primary font-semibold hover:underline">
-          Leer más testimonios →
+          Más historias de clientes →
         </NuxtLink>
       </div>
     </section>
 
     <!-- CTA Banner -->
-    <section class="bg-accent py-16 px-4 text-center text-white">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">¿Listo para pedir?</h2>
-      <p class="text-white/80 mb-8 max-w-md mx-auto">Revise nuestra lista de precios y haga su pedido por WhatsApp.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <NuxtLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors">
-          Ver Lista de Precios
-        </NuxtLink>
-        <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
-          <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Pedir por WhatsApp
-        </a>
+    <section class="relative py-28 px-4 text-center text-white overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=1600&q=80"
+        alt="Frutas y verduras frescas"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-accent/80"></div>
+      <div class="relative z-10">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">¿Se te antojó algo? 😄</h2>
+        <p class="text-white/85 mb-8 max-w-md mx-auto text-lg">Mirá los precios y pedí directo por WhatsApp. ¡Es facilísimo!</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <NuxtLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors shadow-lg">
+            Ver Lista de Precios
+          </NuxtLink>
+          <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm">
+            <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Pedir por WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   </div>
@@ -109,26 +133,46 @@
 <script setup>
 const features = [
   {
-    icon: 'heroicons:check-badge',
+    emoji: '🌿',
     title: '100% Orgánico',
-    desc: 'Todos nuestros productos son cultivados sin pesticidas ni químicos artificiales, respetando la naturaleza.',
+    desc: 'Sin pesticidas, sin químicos raros. Solo tierra, agua y mucho amor por lo natural.',
   },
   {
-    icon: 'heroicons:sun',
-    title: 'Siempre Fresco',
-    desc: 'Cosechamos y entregamos en el mismo ciclo para que usted reciba los productos en su punto óptimo.',
+    emoji: '☀️',
+    title: 'Recién cosechado',
+    desc: 'Cosechamos y entregamos en el mismo ciclo para que llegue a tu mesa en su punto perfecto.',
   },
   {
-    icon: 'heroicons:home',
-    title: 'Entrega a Domicilio',
-    desc: 'Llevamos sus productos directamente a su puerta en los días de entrega establecidos en su zona.',
+    emoji: '🏠',
+    title: 'Te lo llevamos',
+    desc: 'Directo a tu puerta, sin que tengas que salir. Solo pedís por nuestra App y listo.',
   },
 ]
 
 const featured = [
-  { name: 'Tomates Cherry',    icon: 'heroicons:circle-stack',          desc: 'Variedad orgánica dulce', price: '₡1,200/libra' },
-  { name: 'Lechuga Romana',    icon: 'heroicons:bars-3-bottom-left',    desc: 'Fresca y crujiente',      price: '₡800/unidad'  },
-  { name: 'Zanahorias',        icon: 'heroicons:bolt',                  desc: 'Ricas en betacaroteno',   price: '₡900/libra'   },
-  { name: 'Manzanas Fuji',     icon: 'heroicons:ellipsis-horizontal-circle', desc: 'Importadas y orgánicas', price: '₡1,500/libra' },
+  {
+    name: 'Tomates Cherry',
+    img: 'https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=400&q=80',
+    desc: 'Dulcecitos y perfectos para ensaladas',
+    price: '₡1,200/libra',
+  },
+  {
+    name: 'Lechuga Romana',
+    img: 'https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=400&q=80',
+    desc: 'Fresca y crujiente, directo del huerto',
+    price: '₡800/unidad',
+  },
+  {
+    name: 'Zanahorias',
+    img: 'https://images.unsplash.com/photo-1447175008436-054170c2e979?auto=format&fit=crop&w=400&q=80',
+    desc: 'Ricas en betacaroteno, ideales para jugos',
+    price: '₡900/libra',
+  },
+  {
+    name: 'Fresas',
+    img: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=400&q=80',
+    desc: 'Aromáticas y dulces, sin exagerar',
+    price: '₡2,000/caja',
+  },
 ]
 </script>
