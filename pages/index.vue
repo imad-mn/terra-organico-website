@@ -67,61 +67,22 @@
       </div>
     </section>
 
-    <!-- Productos destacados con fotos -->
-    <section class="py-16 px-4 bg-primary/5">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="section-title">Lo más pedido 🛒</h2>
-          <p class="section-subtitle">Lo que nuestros clientes no pueden dejar de pedir</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div v-for="prod in featured" :key="prod.name" class="card hover:shadow-lg transition-all hover:-translate-y-1 cursor-default overflow-hidden !p-0">
-            <div class="h-40 overflow-hidden rounded-t-2xl">
-              <img :src="prod.img" :alt="prod.name" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-4">
-              <h4 class="font-semibold text-dark mb-1">{{ prod.name }}</h4>
-              <p class="text-sm text-dark/60 mb-3">{{ prod.desc }}</p>
-              <span class="text-accent font-bold">{{ prod.price }}</span>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-10">
-          <NuxtLink to="/productos" class="btn-primary">Ver todos los productos</NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonio -->
-    <section class="py-16 px-4">
-      <div class="max-w-2xl mx-auto text-center">
-        <div class="text-5xl mb-4">💬</div>
-        <blockquote class="font-heading text-2xl text-dark/80 italic leading-relaxed mb-6">
-          "¡Los tomates de Terra Orgánico saben como los que hacía mi abuela! Una diferencia total con los del súper."
-        </blockquote>
-        <p class="text-dark/50 font-medium">— María González, San José</p>
-        <NuxtLink to="/testimonios" class="mt-6 inline-block text-primary font-semibold hover:underline">
-          Más historias de clientes →
-        </NuxtLink>
-      </div>
-    </section>
-
     <!-- CTA Banner -->
     <section class="relative py-28 px-4 text-center text-white overflow-hidden">
       <img
-        src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=1600&q=80"
+        src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1600&q=80"
         alt="Frutas y verduras frescas"
         class="absolute inset-0 w-full h-full object-cover"
       />
       <div class="absolute inset-0 bg-accent/80"></div>
       <div class="relative z-10">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">¿Se te antojó algo? 😄</h2>
-        <p class="text-white/85 mb-8 max-w-md mx-auto text-lg">Mirá los precios y pedí directo por WhatsApp. ¡Es facilísimo!</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">¿Listo para pedir?</h2>
+        <p class="text-white/85 mb-8 max-w-lg mx-auto text-lg">Mirá los precios y pedí directo por WhatsApp. ¡Es facilísimo!</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors shadow-lg">
             Ver Lista de Precios
           </NuxtLink>
-          <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm">
+          <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm">
             <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Pedir por WhatsApp
           </a>
         </div>
@@ -146,33 +107,6 @@ const features = [
     emoji: '🏠',
     title: 'Te lo llevamos',
     desc: 'Directo a tu puerta, sin que tengas que salir. Solo pedís por nuestra App y listo.',
-  },
-]
-
-const featured = [
-  {
-    name: 'Tomates Cherry',
-    img: 'https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=400&q=80',
-    desc: 'Dulcecitos y perfectos para ensaladas',
-    price: '₡1,200/libra',
-  },
-  {
-    name: 'Lechuga Romana',
-    img: 'https://images.unsplash.com/photo-1622206151226-18ca2c9ab4a1?auto=format&fit=crop&w=400&q=80',
-    desc: 'Fresca y crujiente, directo del huerto',
-    price: '₡800/unidad',
-  },
-  {
-    name: 'Zanahorias',
-    img: 'https://images.unsplash.com/photo-1447175008436-054170c2e979?auto=format&fit=crop&w=400&q=80',
-    desc: 'Ricas en betacaroteno, ideales para jugos',
-    price: '₡900/libra',
-  },
-  {
-    name: 'Fresas',
-    img: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=400&q=80',
-    desc: 'Aromáticas y dulces, sin exagerar',
-    price: '₡2,000/caja',
   },
 ]
 </script>

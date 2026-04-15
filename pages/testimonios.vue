@@ -30,7 +30,7 @@
     <section class="bg-primary/5 py-12 px-4 text-center">
       <h3 class="font-heading text-2xl font-bold text-primary mb-3">¿Ya es cliente?</h3>
       <p class="text-dark/60 mb-6">Comparta su experiencia con nosotros por WhatsApp.</p>
-      <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
+      <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
         <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Enviar mi testimonio
       </a>
     </section>

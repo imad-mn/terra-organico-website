@@ -14,7 +14,7 @@
         <ul class="space-y-3 text-sm">
           <li class="flex items-center gap-2">
             <UIcon name="simple-icons:whatsapp" class="text-green-400 w-4 h-4" />
-            <a href="https://wa.me/50688532344" target="_blank" rel="noopener" class="hover:text-white transition-colors">+506 8853-2344</a>
+            <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="hover:text-white transition-colors">+506 8853-2344</a>
           </li>
           <li class="flex items-center gap-2">
             <UIcon name="heroicons:envelope" class="text-green-400 w-4 h-4" />

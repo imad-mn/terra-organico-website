@@ -8,7 +8,7 @@
 
     <!-- Floating WhatsApp button -->
     <a
-      href="https://wa.me/50688532344"
+      href="https://wa.me/50686394271"
       target="_blank"
       rel="noopener"
       aria-label="Contáctenos por WhatsApp"

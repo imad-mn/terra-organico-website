@@ -65,12 +65,12 @@ import { ref } from 'vue'
 const menuOpen = ref(false)
 
 const links = [
-  { to: '/',                     label: '🏠 Inicio' },
-  { to: '/quienes-somos',        label: '👥 Quiénes somos' },
-  { to: '/productos',            label: '🥦 Productos' },
-  { to: '/testimonios',          label: '⭐ Testimonios' },
-  { to: '/preguntas-frecuentes', label: '❓ Preguntas Frecuentes' },
-  { to: '/costos-envio',         label: '🚚 Envíos' },
-  { to: '/lista-precios',        label: '🏷️ Precios' },
+  { to: '/',                     label: 'Inicio' },
+  { to: '/quienes-somos',        label: 'Quiénes somos' },
+  { to: '/productos',            label: 'Productos' },
+  { to: '/testimonios',          label: 'Testimonios' },
+  { to: '/preguntas-frecuentes', label: 'Preguntas Frecuentes' },
+  { to: '/costos-envio',         label: 'Envíos' },
+  { to: '/lista-precios',        label: 'Precios' },
 ]
 </script>

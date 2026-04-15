@@ -8,28 +8,33 @@
 
     <!-- Story -->
     <section class="py-20 px-4">
-      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 class="section-title">Nuestra Historia</h2>
-          <p class="text-dark/70 leading-relaxed mb-4">
-            Terra Orgánico nació de una convicción simple: <strong>la alimentación sana es un derecho, no un lujo.</strong>
-            Comenzamos como un pequeño proyecto familiar con un huerto en el patio, y hoy entregamos productos frescos y
-            orgánicos a decenas de familias en toda el área metropolitana.
+          <h2 class="section-title">En Terra Orgánico</h2>
+          <div class="text-dark/70 leading-relaxed">
+          <p class="mb-4">
+            Estamos comprometidos a transformar la forma en que las personas experimentan las alimentación y la salud. 
+            A través de la colaboración con las Fincas locales Certificadas y el cultivo de productos orgánicos, libres de pesticidas y agroquímicos, buscamos nutrir a nuestras comunidades con alimentos de la más alta calidad. 
+            Creemos que cada bocado es una oportunidad para promover la vitalidad y el bienestar.
           </p>
-          <p class="text-dark/70 leading-relaxed mb-4">
-            Trabajamos directamente con agricultores locales que comparten nuestra filosofía: cultivar sin químicos,
-            respetar los ciclos naturales y cuidar la tierra para las próximas generaciones.
+          <p class="mb-4">
+             Al impulsar la Economía Local y promover prácticas agrícolas sostenibles, estamos sembrando las semillas de un futuro más pleno y saludable para todos.           </p>
+          <p class="mb-4">
+            Nuestra Misión va más allá de la comida; es un compromiso con la salud, la Sostenibilidad y el florecimiento de la Naturaleza y la Humanidad.
           </p>
-          <p class="text-dark/70 leading-relaxed">
-            Nuestra promesa es simple: <em>de la tierra a su hogar</em>, con frescura, confianza y amor.
+          <p>
+            ¡Únete a nosotros en este Viaje hacia una Vida Plena y Saludable!
           </p>
-        </div>
-        <div class="rounded-2xl bg-primary/10 h-72 flex items-center justify-center">
-          <div class="text-center text-primary/40">
-            <UIcon name="heroicons:photo" class="w-16 h-16 mx-auto mb-3" />
-            <p class="text-sm">Foto del equipo / huerto</p>
           </div>
         </div>
+        <iframe
+          class="w-full max-w-4xl aspect-video rounded-xl shadow-lg"
+          src="https://www.youtube.com/embed/CX6I_RHx5Ok"
+          title="Terra Orgánico"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
 

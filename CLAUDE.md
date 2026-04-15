@@ -58,7 +58,7 @@ Fonts: **Nunito** (`font-heading`) + **Nunito Sans** (`font-body`), loaded from 
 ## Key details
 
 - Logo is served from `public/logo.png`.
-- WhatsApp number used throughout: **+506 8853-2344** (`https://wa.me/50688532344`).
+- WhatsApp number used throughout: **+506 8853-2344** (`https://wa.me/50686394271`).
 - The `lista-precios.vue` print button calls `window.print()`; print styles are in a `<style>` block at the bottom of that file.
 - Scroll-to-top on navigation is handled automatically by Nuxt.
 - All prerendered routes are explicitly listed in `nuxt.config.ts` under `nitro.prerender.routes`.

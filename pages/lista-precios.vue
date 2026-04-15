@@ -6,10 +6,10 @@
     </section>
 
     <section class="py-10 px-4">
-      <div class="max-w-4xl mx-auto space-y-10">
+      <div class="max-w-4xl mx-auto space-y-6">
 
         <!-- Controls -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <div class="flex flex-wrap gap-2">
             <button
               v-for="cat in categories"
@@ -33,15 +33,15 @@
           :key="cat"
           class="card p-0 overflow-hidden"
         >
-          <div class="bg-primary px-6 py-3">
+          <div class="bg-primary px-3 py-3">
             <h3 class="font-heading font-bold text-white text-lg">{{ cat }}</h3>
           </div>
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-primary/10 bg-primary/5">
-                <th class="text-left px-6 py-3 font-semibold text-dark/60">Producto</th>
-                <th class="text-left px-6 py-3 font-semibold text-dark/60">Presentación</th>
-                <th class="text-right px-6 py-3 font-semibold text-dark/60">Precio</th>
+                <th class="text-left px-3 py-3 font-semibold text-dark/60">Producto</th>
+                <th class="text-left px-3 py-3 font-semibold text-dark/60">Presentación</th>
+                <th class="text-right px-3 py-3 font-semibold text-dark/60">Precio</th>
               </tr>
             </thead>
             <tbody>
@@ -51,9 +51,9 @@
                 :class="i % 2 === 0 ? 'bg-white/40' : 'bg-white/10'"
                 class="border-b border-primary/5 last:border-0"
               >
-                <td class="px-6 py-3 font-medium text-dark">{{ item.name }}</td>
-                <td class="px-6 py-3 text-dark/60">{{ item.unit }}</td>
-                <td class="px-6 py-3 text-right font-bold text-accent">{{ item.price }}</td>
+                <td class="px-3 py-3 font-medium text-dark">{{ item.name }}</td>
+                <td class="px-3 py-3 text-dark/60">{{ item.unit }}</td>
+                <td class="px-3 py-3 text-right font-bold text-accent">{{ item.price }}</td>
               </tr>
             </tbody>
           </table>
