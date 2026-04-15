@@ -52,5 +52,10 @@ export default defineNuxtConfig({
         '@vue/devtools-kit',
       ]
     }
+  },
+  runtimeConfig: {
+    public: {
+      apiBase: '' // El valor se tomará de NUXT_PUBLIC_API_BASE
+    }
   }
 })

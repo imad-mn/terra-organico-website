@@ -16,15 +16,15 @@
         <!-- Ruta San José -->
         <div>
           <h2 class="font-heading text-2xl font-bold text-primary mb-2 flex items-center gap-2">
-            <UIcon name="heroicons:truck" class="w-6 h-6" /> Ruta San José (Entrega todos los martes)
+            <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" /> Ruta San José (Entrega todos los martes)
           </h2>
           <p class="text-dark/60 mb-4">Tres Ríos, Curridabat, San Pedro, Tibás, San José Centro, Escazú, Santa Ana.</p>
           <div class="card overflow-x-auto p-0">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
-                  <th class="text-left px-6 py-4 font-semibold rounded-tl-2xl">Monto del pedido</th>
-                  <th class="text-left px-6 py-4 font-semibold rounded-tr-2xl">Costo de envío</th>
+                  <th class="text-left px-3 py-4 font-semibold rounded-tl-2xl">Monto del pedido</th>
+                  <th class="text-left px-3 py-4 font-semibold rounded-tr-2xl">Envío</th>
                 </tr>
               </thead>
               <tbody>
@@ -34,8 +34,8 @@
                   :class="i % 2 === 0 ? 'bg-white/40' : 'bg-white/20'"
                   class="border-b border-primary/10 last:border-0"
                 >
-                  <td class="px-6 py-4 text-dark/70">{{ tier.label }}</td>
-                  <td class="px-6 py-4">
+                  <td class="px-3 py-4 text-dark/70">{{ tier.label }}</td>
+                  <td class="px-3 py-4">
                     <span :class="tier.free ? 'text-primary font-bold' : 'text-accent font-semibold'">
                       {{ tier.cost }}
                     </span>
@@ -48,16 +48,17 @@
 
         <!-- Ruta Cartago o Desamparados -->
         <div>
-          <h2 class="font-heading text-2xl font-bold text-primary mb-2 flex items-center gap-2">
-            <UIcon name="heroicons:truck" class="w-6 h-6" /> Ruta Cartago o Desamparados (Entrega martes por medio)
+          <h2 class="text-2xl font-bold text-primary mb-2 flex items-center gap-2">
+            <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" />
+            <span>Ruta Cartago o Desamparados (Entrega martes por medio)</span>
           </h2>
           <p class="text-dark/60 mb-4">Una semana para Cartago, Paraíso y la otra para Desamparados.</p>
           <div class="card overflow-x-auto p-0">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
-                  <th class="text-left px-6 py-4 font-semibold rounded-tl-2xl">Monto del pedido</th>
-                  <th class="text-left px-6 py-4 font-semibold rounded-tr-2xl">Costo de envío</th>
+                  <th class="text-left px-3 py-4 font-semibold rounded-tl-2xl">Monto del pedido</th>
+                  <th class="text-left px-3 py-4 font-semibold rounded-tr-2xl">Envío</th>
                 </tr>
               </thead>
               <tbody>
@@ -67,8 +68,8 @@
                   :class="i % 2 === 0 ? 'bg-white/40' : 'bg-white/20'"
                   class="border-b border-primary/10 last:border-0"
                 >
-                  <td class="px-6 py-4 text-dark/70">{{ tier.label }}</td>
-                  <td class="px-6 py-4">
+                  <td class="px-3 py-4 text-dark/70">{{ tier.label }}</td>
+                  <td class="px-3 py-4">
                     <span :class="tier.free ? 'text-primary font-bold' : 'text-accent font-semibold'">
                       {{ tier.cost }}
                     </span>
@@ -82,15 +83,15 @@
         <!-- Ruta Heredia -->
         <div>
           <h2 class="font-heading text-2xl font-bold text-primary mb-2 flex items-center gap-2">
-            <UIcon name="heroicons:truck" class="w-6 h-6" /> Ruta Heredia (Entrega todos los miércoles)
+            <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" /> Ruta Heredia (Entrega todos los miércoles)
           </h2>
           <p class="text-dark/60 mb-4">Coronado, Moravia y Heredia.</p>
           <div class="card overflow-x-auto p-0">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
-                  <th class="text-left px-6 py-4 font-semibold rounded-tl-2xl">Monto del pedido</th>
-                  <th class="text-left px-6 py-4 font-semibold rounded-tr-2xl">Costo de envío</th>
+                  <th class="text-left px-3 py-4 font-semibold rounded-tl-2xl">Monto del pedido</th>
+                  <th class="text-left px-3 py-4 font-semibold rounded-tr-2xl">Envío</th>
                 </tr>
               </thead>
               <tbody>
@@ -100,8 +101,8 @@
                   :class="i % 2 === 0 ? 'bg-white/40' : 'bg-white/20'"
                   class="border-b border-primary/10 last:border-0"
                 >
-                  <td class="px-6 py-4 text-dark/70">{{ tier.label }}</td>
-                  <td class="px-6 py-4">
+                  <td class="px-3 py-4 text-dark/70">{{ tier.label }}</td>
+                  <td class="px-3 py-4">
                     <span :class="tier.free ? 'text-primary font-bold' : 'text-accent font-semibold'">
                       {{ tier.cost }}
                     </span>

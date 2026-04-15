@@ -7,17 +7,17 @@
 
     <section class="py-10 px-4">
       <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <div
             v-for="(t, i) in testimonios"
             :key="i"
-            class="card flex flex-col gap-4"
+            class="card flex flex-col gap-3"
           >
-            <blockquote class="font-heading text-lg italic text-dark/80 leading-relaxed flex-1">
-              "{{ t.quote }}"
+            <blockquote class="font-heading text-sm italic text-dark/80 leading-relaxed flex-1 whitespace-pre-line">
+              "{{ t.Testimonio }}"
             </blockquote>
             <div class="border-t border-primary/10 pt-3">
-              <p class="font-semibold text-dark">{{ t.name }}</p>
+              <p class="font-semibold text-dark">{{ t.Persona }}</p>
             </div>
           </div>
         </div>
@@ -38,37 +38,13 @@
   </div>
 </template>
 
-<script setup>
-const testimonios = [
-  {
-    quote: 'Desde que empecé a pedir con Terra Orgánico, noto la diferencia en el sabor y la frescura. ¡Los tomates parecen recién cosechados!',
-    name: 'María González',
-    location: 'San José',
-  },
-  {
-    quote: 'Me encanta que puedo pedir por WhatsApp y me llegan los productos directamente a casa. Súper práctico y siempre frescos.',
-    name: 'Carlos Méndez',
-    location: 'Heredia',
-  },
-  {
-    quote: 'La calidad es incomparable. Mis hijos ahora comen más vegetales porque se notan más sabrosos que los del supermercado.',
-    name: 'Sofía Ramírez',
-    location: 'Alajuela',
-  },
-  {
-    quote: 'Excelente servicio y puntualidad. Siempre llegan el día prometido y en perfectas condiciones. Muy recomendado.',
-    name: 'Andrés Solano',
-    location: 'Cartago',
-  },
-  {
-    quote: 'El queso Turrialba y la miel son mis favoritos. Productos artesanales de verdad, se nota la diferencia con lo industrial.',
-    name: 'Laura Vargas',
-    location: 'Curridabat',
-  },
-  {
-    quote: 'Me siento bien sabiendo que lo que como es orgánico y de producción local. Terra Orgánico hace ese proceso muy fácil.',
-    name: 'Diego Morales',
-    location: 'Santa Ana',
-  },
-]
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import { obtenerTestimonios, type Testimonio } from '~/serviciosAPI';
+
+const testimonios = ref<Testimonio[]>([]);
+
+onMounted(async () => {
+  testimonios.value = await obtenerTestimonios();
+});
 </script>

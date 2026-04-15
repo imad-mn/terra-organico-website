@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-dark text-white/80 mt-auto">
-    <div class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Brand -->
       <div class="flex flex-col items-start gap-3">
         <img src="/logo.png" alt="Terra Orgánico" class="h-16 w-16 rounded-full object-cover" />
@@ -32,12 +32,12 @@
       </div>
     </div>
 
-    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3 space-y-1">
-      <div>© {{ new Date().getFullYear() }} Terra Orgánico. Todos los derechos reservados.</div>
-      <div class="flex items-center justify-center gap-1">
+    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3 flex items-center justify-center gap-2">
+      <span>© {{ new Date().getFullYear() }} Terra Orgánico. Todos los derechos reservados.</span>
+      <span class="flex items-center gap-1">
         Hecho con <UIcon name="heroicons:heart-solid" class="w-3 h-3 text-red-400" /> por
         <a href="https://imvisoft.com/" target="_blank" rel="noopener" class="hover:text-white/70 transition-colors underline underline-offset-2">IMVIsoft</a>
-      </div>
+      </span>
     </div>
   </footer>
 </template>
