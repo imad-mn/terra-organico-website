@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero con foto -->
-    <section class="relative py-24 px-4 text-center text-white overflow-hidden">
+    <section class="relative py-18 px-4 text-center text-white overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1510629954389-c1e0da47d414?auto=format&fit=crop&w=1600&q=80"
         alt="Canasta de verduras orgánicas"
