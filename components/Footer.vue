@@ -32,8 +32,12 @@
       </div>
     </div>
 
-    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3">
-      © {{ new Date().getFullYear() }} Terra Orgánico. Todos los derechos reservados.
+    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3 space-y-1">
+      <div>© {{ new Date().getFullYear() }} Terra Orgánico. Todos los derechos reservados.</div>
+      <div class="flex items-center justify-center gap-1">
+        Hecho con <UIcon name="heroicons:heart-solid" class="w-3 h-3 text-red-400" /> por
+        <a href="https://imvisoft.com/" target="_blank" rel="noopener" class="hover:text-white/70 transition-colors underline underline-offset-2">ImviSoft</a>
+      </div>
     </div>
   </footer>
 </template>

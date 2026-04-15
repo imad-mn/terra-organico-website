@@ -40,8 +40,11 @@
 
         <div class="mt-12 card text-center">
           <p class="text-dark/70 mb-4">¿No encontró su respuesta? Escríbanos directamente.</p>
-          <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-            <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Consultar por WhatsApp
+          <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="btn-primary">
+            <div class="inline-flex items-center gap-2">
+              <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />
+              <span>Consultar por WhatsApp</span>
+            </div>
           </a>
         </div>
       </div>
@@ -59,44 +62,44 @@ function toggle(i) {
 
 const faqs = [
   {
-    question: '¿Cómo hago un pedido?',
-    answer: 'Puede hacer su pedido directamente por WhatsApp al número indicado en el pie de página. Envíenos la lista de productos que desea y le confirmaremos disponibilidad y precio total.',
+    question: '¿Cómo sé que de verdad son productos orgánicos?',
+    answer: 'Nuestros productos provienen de: fincas certificadas bajo normativas orgánicas oficiales, y productores que, aunque no exista una certificación como tal del producto, siguen prácticas estrictas de cultivo y crianza libre de químicos, pesticidas, hormonas, anabólicos, etc. Siempre informamos claramente el origen y el tipo de tratamiento de cada producto para que compres con total confianza.',
   },
   {
-    question: '¿Cuáles son los días de entrega?',
-    answer: 'Los días de entrega varían según su zona. Consulte la sección de Costos de Envío para ver el calendario de entregas por área geográfica.',
+    question: '¿Cómo se conservan los productos durante el reparto?',
+    answer: 'Utilizamos empaques adecuados según el tipo de producto y transporte en frío para mantener la frescura, calidad y seguridad alimentaria. Además, fomentamos el uso de empaques reutilizables como cartones de huevos y botellas plásticas retornables, promoviendo prácticas sostenibles en cada entrega.',
+  },
+  {
+    question: '¿Hacen entregas a domicilio y en qué horarios?',
+    answer: 'Sí, realizamos entregas a domicilio en rutas programadas según tu ubicación. Puedes revisar el menú de "Envíos" para verificarlo en la zona que te encuentras. Siempre buscamos que recibas tus productos en el menor tiempo posible y en óptimas condiciones.',
+  },
+  {
+    question: '¿Los productos son de temporada?',
+    answer: 'Sí, trabajamos principalmente con productos de temporada para asegurar frescura, mejor sabor y menor impacto ambiental. Esto nos permite ofrecer alimentos más nutritivos y apoyar prácticas agrícolas responsables que respetan los ciclos naturales de cada cultivo. ',
+  },
+  {
+    question: '¿Qué hago si un producto llega en mal estado?',
+    answer: 'Si recibes un producto en mal estado, por favor contáctanos dentro de las primeras 24 horas posteriores a la entrega enviando una foto y una breve descripción del problema. Evaluaremos el caso y te ofreceremos una solución: reposición del producto, o reembolso, según corresponda. Nuestro compromiso es asegurar tu satisfacción y la calidad de cada entrega.',
+  },
+  {
+    question: '¿Cómo realizo un pedido? ',
+    answer: 'Al registrarte, te asignaremos un código de cliente con el cual podrás ingresar fácilmente a nuestra plataforma. Desde nuestra página oficial podrás seleccionar tus productos, agregar al carrito y enviar tu pedido de forma rápida y sencilla. También recibirás asistencia personalizada si lo necesitas.',
   },
   {
     question: '¿Cuándo debo hacer mi pedido?',
-    answer: 'Los pedidos deben realizarse con al menos 48 horas de anticipación a su día de entrega programado, para asegurar disponibilidad y organizar la logística.',
-  },
-  {
-    question: '¿Los productos realmente son orgánicos?',
-    answer: 'Sí. Trabajamos únicamente con agricultores que cultivan sin pesticidas ni fertilizantes químicos. Varios de nuestros proveedores cuentan con certificación orgánica y gustosamente le compartimos esa información.',
+    answer: 'Los pedidos deben tomarse los días jueves y viernes, para asegurar disponibilidad y organizar la logística.',
   },
   {
     question: '¿Tienen monto mínimo de pedido?',
-    answer: 'Sí, el monto mínimo de pedido es de ₡5,000 para zonas con costo de envío incluido. Para pedidos menores, aplica un cargo adicional. Consulte en WhatsApp.',
+    answer: ' No hay un montón mínimo. El costo de envío es de acuerdo al tamaño del pedido.',
   },
   {
-    question: '¿Cómo se realiza el pago?',
-    answer: 'Aceptamos transferencia bancaria (SINPE Móvil), depósito en cuenta y efectivo al momento de la entrega, según disponibilidad de ruta.',
-  },
-  {
-    question: '¿Qué pasa si un producto no está disponible?',
-    answer: 'Le avisamos con anticipación si algún producto de su pedido no está disponible esa semana, y le ofrecemos una alternativa o ajustamos el monto de su pedido.',
-  },
-  {
-    question: '¿Entregan fuera del área metropolitana?',
-    answer: 'Actualmente atendemos principalmente la Gran Área Metropolitana. Si está en otra zona, contáctenos y evaluamos si es posible llegar hasta usted o coordinar un punto de retiro.',
+    question: '¿Cuáles son las formas de pago disponibles?',
+    answer: 'Puedes realizar el pago al momento de la entrega, una vez hayas verificado que tu pedido esté completo y en buen estado. Aceptamos pagos en efectivo o por Sinpe Móvil, para tu comodidad y seguridad.',
   },
   {
     question: '¿Puedo cancelar o modificar mi pedido?',
-    answer: 'Puede modificar o cancelar su pedido hasta 24 horas antes de la fecha de entrega acordada, comunicándose por WhatsApp.',
-  },
-  {
-    question: '¿Tienen productos disponibles todo el año?',
-    answer: 'La disponibilidad de ciertos productos depende de la temporada. Nuestra selección varía para ofrecer siempre lo más fresco. Consulte la lista semanal por WhatsApp.',
+    answer: 'Los pedidos se toman jueves y viernes. El día límite para cancelar o modificar el pedido es el día sábado.',
   },
 ]
 </script>
