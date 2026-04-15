@@ -5,21 +5,19 @@
       <p class="text-white/70 text-lg max-w-xl mx-auto">Lo que dicen nuestros clientes</p>
     </section>
 
-    <section class="py-20 px-4">
+    <section class="py-10 px-4">
       <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div
             v-for="(t, i) in testimonios"
             :key="i"
             class="card flex flex-col gap-4"
           >
-            <UIcon name="heroicons:chat-bubble-left" class="w-8 h-8 text-primary/30" />
             <blockquote class="font-heading text-lg italic text-dark/80 leading-relaxed flex-1">
               "{{ t.quote }}"
             </blockquote>
             <div class="border-t border-primary/10 pt-3">
               <p class="font-semibold text-dark">{{ t.name }}</p>
-              <p class="text-sm text-dark/50">{{ t.location }}</p>
             </div>
           </div>
         </div>
@@ -30,8 +28,11 @@
     <section class="bg-primary/5 py-12 px-4 text-center">
       <h3 class="font-heading text-2xl font-bold text-primary mb-3">¿Ya es cliente?</h3>
       <p class="text-dark/60 mb-6">Comparta su experiencia con nosotros por WhatsApp.</p>
-      <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2">
-        <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Enviar mi testimonio
+      <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="btn-primary">
+        <div class="inline-flex items-center gap-2">
+          <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />
+          <span>Enviar mi testimonio</span>
+        </div>
       </a>
     </section>
   </div>

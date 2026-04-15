@@ -68,7 +68,7 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="relative py-28 px-4 text-center text-white overflow-hidden">
+    <section class="relative py-30 px-4 text-center text-white overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1600&q=80"
         alt="Frutas y verduras frescas"

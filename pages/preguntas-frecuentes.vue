@@ -5,7 +5,7 @@
       <p class="text-white/70 text-lg max-w-xl mx-auto">Respuestas a las dudas más comunes</p>
     </section>
 
-    <section class="py-20 px-4">
+    <section class="py-10 px-4">
       <div class="max-w-3xl mx-auto">
         <div class="space-y-3">
           <div

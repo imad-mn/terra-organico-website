@@ -7,8 +7,8 @@
     </section>
 
     <!-- Story -->
-    <section class="py-20 px-4">
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <section class="py-10 px-4">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
         <div>
           <h2 class="section-title">En Terra Orgánico</h2>
           <div class="text-dark/70 leading-relaxed">
@@ -39,7 +39,7 @@
     </section>
 
     <!-- Mission & Vision -->
-    <section class="py-16 px-4 bg-primary/5">
+    <!-- <section class="py-10 px-4 bg-primary/5">
       <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="card border-l-4 border-primary">
           <h3 class="font-heading text-2xl font-bold text-primary mb-3">Misión</h3>
@@ -56,10 +56,10 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Values -->
-    <section class="py-20 px-4">
+    <section class="py-10 px-4 bg-primary/5">
       <div class="max-w-5xl mx-auto text-center">
         <h2 class="section-title">Nuestros Valores</h2>
         <p class="section-subtitle">Los principios que guían cada decisión que tomamos</p>
