@@ -55,7 +55,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: '' // El valor se tomará de NUXT_PUBLIC_API_BASE
+      apiBase: '', // El valor se tomará de NUXT_PUBLIC_API_BASE
+      imagesBase: '' // El valor se tomará de NUXT_PUBLIC_IMAGES_BASE
     }
   }
 })

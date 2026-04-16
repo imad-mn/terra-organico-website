@@ -44,7 +44,5 @@ import { obtenerTestimonios, type Testimonio } from '~/serviciosAPI';
 
 const testimonios = ref<Testimonio[]>([]);
 
-onMounted(async () => {
-  testimonios.value = await obtenerTestimonios();
-});
+onMounted(async () => testimonios.value = await obtenerTestimonios());
 </script>

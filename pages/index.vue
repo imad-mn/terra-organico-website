@@ -77,13 +77,13 @@
       <div class="absolute inset-0 bg-accent/80"></div>
       <div class="relative z-10">
         <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">¿Listo para pedir?</h2>
-        <p class="text-white/85 mb-8 max-w-lg mx-auto text-lg">Mirá los precios y pedí directo por WhatsApp. ¡Es facilísimo!</p>
+        <p class="text-white/85 mb-8 max-w-lg mx-auto text-lg">Mirá los precios, y escríbenos para guiarte en el proceso de pedido!</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors shadow-lg">
             Ver Lista de Precios
           </NuxtLink>
           <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm">
-            <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Pedir por WhatsApp
+            <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Realizar el proceso de Pedido
           </a>
         </div>
       </div>

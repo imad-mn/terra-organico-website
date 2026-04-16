@@ -46,82 +46,43 @@
             </thead>
             <tbody>
               <tr
-                v-for="(item, i) in groupedPrices[cat]"
-                :key="item.name"
+                v-for="(item, i) in products.filter(p => p.tipo === cat)"
+                :key="item.nombre"
                 :class="i % 2 === 0 ? 'bg-white/40' : 'bg-white/10'"
                 class="border-b border-primary/5 last:border-0"
               >
-                <td class="px-3 py-3 font-medium text-dark">{{ item.name }}</td>
-                <td class="px-3 py-3 text-dark/60">{{ item.unit }}</td>
-                <td class="px-3 py-3 text-right font-bold text-accent">{{ item.price }}</td>
+                <td class="px-3 py-3 font-medium text-dark">{{ item.nombre }}</td>
+                <td class="px-3 py-3 text-dark/60">{{ item.presentacion }}</td>
+                <td class="px-3 py-3 text-right font-bold text-accent">₡{{ item.precio }}</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <p class="text-center text-dark/40 mt-4">
-          * Precios en colones costarricenses (₡). Sujetos a cambio sin previo aviso según disponibilidad.
+          Sujetos a cambio sin previo aviso según disponibilidad.
         </p>
       </div>
     </section>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
+import { obtenerCategorias, obtenerProductos, type Producto } from '~/serviciosAPI';
 
-const prices = [
-  { category: 'Verduras',  name: 'Tomates Cherry',      unit: '1 libra',    price: '₡1,200' },
-  { category: 'Verduras',  name: 'Lechuga Romana',      unit: '1 unidad',   price: '₡800'   },
-  { category: 'Verduras',  name: 'Zanahorias Baby',     unit: '1 libra',    price: '₡900'   },
-  { category: 'Verduras',  name: 'Espinaca Orgánica',   unit: '1 atado',    price: '₡1,100' },
-  { category: 'Verduras',  name: 'Pepino',              unit: '1 unidad',   price: '₡600'   },
-  { category: 'Verduras',  name: 'Brócoli',             unit: '1 unidad',   price: '₡1,300' },
-  { category: 'Verduras',  name: 'Pimiento Rojo',       unit: '1 unidad',   price: '₡700'   },
-  { category: 'Verduras',  name: 'Cebolla Morada',      unit: '1 libra',    price: '₡900'   },
-  { category: 'Frutas',    name: 'Manzanas Fuji',       unit: '1 libra',    price: '₡1,500' },
-  { category: 'Frutas',    name: 'Bananos Orgánicos',   unit: '1 racimo',   price: '₡700'   },
-  { category: 'Frutas',    name: 'Fresas',              unit: '1 caja',     price: '₡2,000' },
-  { category: 'Frutas',    name: 'Piña',                unit: '1 unidad',   price: '₡1,000' },
-  { category: 'Frutas',    name: 'Papaya Hawaiana',     unit: '1 unidad',   price: '₡1,200' },
-  { category: 'Lácteos',   name: 'Queso Turrialba',    unit: '250 g',      price: '₡3,500' },
-  { category: 'Lácteos',   name: 'Yogur Natural',       unit: '500 ml',     price: '₡2,200' },
-  { category: 'Lácteos',   name: 'Crema Dulce',         unit: '250 ml',     price: '₡1,500' },
-  { category: 'Granos',    name: 'Arroz Integral',      unit: '1 kg',       price: '₡1,800' },
-  { category: 'Granos',    name: 'Frijoles Negros',     unit: '1 kg',       price: '₡1,500' },
-  { category: 'Granos',    name: 'Lentejas Rojas',      unit: '500 g',      price: '₡1,200' },
-  { category: 'Otros',     name: 'Granola Artesanal',   unit: '300 g',      price: '₡2,500' },
-  { category: 'Otros',     name: 'Miel Pura',           unit: '350 ml',     price: '₡3,000' },
-  { category: 'Otros',     name: 'Aceite de Coco',      unit: '250 ml',     price: '₡4,500' },
-  { category: 'Otros',     name: 'Semillas de Chía',    unit: '200 g',      price: '₡2,000' },
-]
+const products = ref<Producto[]>([]);
+const categories = ref<string[]>([]);
 
-const categories = ['Todos', 'Verduras', 'Frutas', 'Lácteos', 'Granos', 'Otros']
+onMounted(async () => {
+  products.value = (await obtenerProductos()).sort((a, b) => a.nombre.localeCompare(b.nombre));
+  categories.value = ['Todos', ...(await obtenerCategorias())];
+});
+
 const activeCategory = ref('Todos')
 
 const visibleCategories = computed(() => {
-  if (activeCategory.value === 'Todos') return ['Verduras', 'Frutas', 'Lácteos', 'Granos', 'Otros']
+  if (activeCategory.value === 'Todos') return categories.value.filter(c => c !== 'Todos')
   return [activeCategory.value]
 })
-
-const groupedPrices = computed(() => {
-  const grouped = {}
-  for (const item of prices) {
-    if (!grouped[item.category]) grouped[item.category] = []
-    grouped[item.category].push(item)
-  }
-  return grouped
-})
-
-function printPage() {
-  window.print()
-}
 </script>
-
-<style>
-@media print {
-  header, footer, button, .page-hero + * > .flex { display: none !important; }
-  body { background: white; }
-  .card { border: 1px solid #ccc; box-shadow: none; }
-}
-</style>
