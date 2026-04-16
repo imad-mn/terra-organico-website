@@ -10,7 +10,7 @@
       <div class="absolute inset-0" style="background: rgba(45,106,45,0.78)"></div>
       <div class="relative z-10">
         <h1 class="text-4xl md:text-5xl font-heading font-bold mb-3">Nuestros Productos</h1>
-        <p class="text-white/80 text-lg max-w-xl mx-auto">Frescos, orgánicos y cultivados con mucho cariño</p>
+        <p class="text-white/80 text-lg max-w-xl mx-auto">Frescos, libres de pesticidas y cultivados con mucho cariño</p>
       </div>
     </section>
 
@@ -66,7 +66,7 @@
         </div>
 
         <p class="text-center text-dark/50 text-sm mt-12">
-          * Disponibilidad según temporada. Consultá por WhatsApp para ver el stock del día 👇
+          * La disponibilidad y precio de los productos puede variar según la temporada y stock.
         </p>
       </div>
     </section>
@@ -82,8 +82,8 @@ const products = ref<Producto[]>([]);
 const categories = ref<string[]>([]);
 
 onMounted(async () => {
-  products.value = await obtenerProductos();
-  categories.value = ['Todos', ...(await obtenerCategorias())];
+  products.value = (await obtenerProductos()).filter(p => p.habilitado);
+  categories.value = ['Todos', ...(await obtenerCategorias()).filter(c => c !== 'Otros')];
 });
 
 const activeCategory = ref<string>('Todos')
@@ -91,8 +91,8 @@ const searchTerm = ref<string>('')
 
 const filteredProducts = computed(() => {
   let filtered = activeCategory.value === 'Todos'
-    ? products.value.filter(p => p.habilitado)
-    : products.value.filter(p => p.habilitado && p.tipo === activeCategory.value)
+    ? products.value
+    : products.value.filter(p => p.tipo === activeCategory.value)
 
   if (searchTerm.value.trim()) {
     filtered = filtered.filter(p =>
@@ -101,5 +101,14 @@ const filteredProducts = computed(() => {
   }
 
   return filtered
+})
+
+useSeoMeta({
+  title: 'Productos Libres de Pesticidas - Terra Orgánico',
+  ogTitle: 'Nuestros Productos Libres de Pesticidas',
+  description: 'Catálogo completo de verduras, frutas y productos libres de pesticidas frescos. 100% natural. Compra online y recibe en tu hogar en Costa Rica.',
+  ogDescription: 'Descubre nuestro catálogo de productos libres de pesticidas: verduras, frutas y más, cultivados sin químicos.',
+  ogImage: 'https://images.unsplash.com/photo-1510629954389-c1e0da47d414?auto=format&fit=crop&w=1200&q=80',
+  keywords: 'productos orgánicos, verduras frescas, frutas orgánicas, compra online Costa Rica, delivery frutas verduras',
 })
 </script>

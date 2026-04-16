@@ -45,4 +45,12 @@ import { obtenerTestimonios, type Testimonio } from '~/serviciosAPI';
 const testimonios = ref<Testimonio[]>([]);
 
 onMounted(async () => testimonios.value = await obtenerTestimonios());
+
+useSeoMeta({
+  title: 'Testimonios - Terra Orgánico',
+  ogTitle: 'Lo que dicen nuestros clientes',
+  description: 'Lee las experiencias reales de clientes satisfechos con los productos orgánicos frescos de Terra Orgánico. Testimonios verificados de entregas a domicilio en Costa Rica.',
+  ogDescription: 'Descubre qué piensan nuestros clientes sobre los productos orgánicos y el servicio de Terra Orgánico.',
+  ogImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80',
+})
 </script>

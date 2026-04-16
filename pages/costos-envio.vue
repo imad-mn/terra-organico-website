@@ -119,6 +119,14 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Costos de Envío - Terra Orgánico',
+  ogTitle: 'Tarifas de envío por ruta y monto',
+  description: 'Consulta los costos de envío de Terra Orgánico según tu ubicación en Costa Rica: San José, Cartago, Desamparados y Heredia. Entregas programadas con tarifas fijas.',
+  ogDescription: 'Conoce las tarifas de envío de Terra Orgánico según tu zona y monto de pedido en Costa Rica.',
+  ogImage: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80',
+})
+
 const cartajoSanJose = [
   { label: 'Pedido menor a ₡7,000',                  cost: '₡2,000', free: false },
   { label: 'Pedido mayor a ₡7,000',                  cost: '₡1,000', free: false },

@@ -48,14 +48,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { obtenerCategorias, obtenerProductos, type Producto } from '~/serviciosAPI';
+
+useSeoMeta({
+  title: 'Lista de Precios - Terra Orgánico',
+  ogTitle: 'Precios de productos orgánicos frescos',
+  description: 'Consulta la lista de precios actualizada semanalmente de todos los productos orgánicos frescos de Terra Orgánico. Verduras, frutas y más.',
+  ogDescription: 'Precios de verduras y frutas orgánicas frescas en Terra Orgánico, actualizados semanalmente.',
+  ogImage: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80',
+  keywords: 'precios frutas orgánicas, precios verduras Costa Rica, lista de precios productos frescos',
+})
 
 const products = ref<Producto[]>([]);
 const categories = ref<string[]>([]);
 
 onMounted(async () => {
-  products.value = (await obtenerProductos()).sort((a, b) => a.nombre.localeCompare(b.nombre));
-  categories.value = await obtenerCategorias();
+  products.value = ((await obtenerProductos()).filter(p => p.habilitado)).sort((a, b) => a.nombre.localeCompare(b.nombre));
+  categories.value = (await obtenerCategorias()).filter(c => c !== 'Otros');
 });
 </script>

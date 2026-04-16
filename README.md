@@ -1,6 +1,6 @@
 # Terra Orgánico
 
-Sitio web para la tienda virtual de productos orgánicos **Terra Orgánico** — *De la tierra a su hogar*.
+Sitio web para la tienda virtual de productos libres de pesticidas **Terra Orgánico** — *De la tierra a su hogar*.
 
 ## Tecnologías
 

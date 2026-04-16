@@ -95,8 +95,8 @@
 const features = [
   {
     emoji: '🌿',
-    title: '100% Orgánico',
-    desc: 'Sin pesticidas, sin químicos raros. Solo tierra, agua y mucho amor por lo natural.',
+    title: '100% Libre agrotóxicos y pesticidas. ',
+    desc: 'Sin químicos raros. Solo tierra, agua y mucho amor por lo natural.',
   },
   {
     emoji: '☀️',
@@ -109,4 +109,41 @@ const features = [
     desc: 'Directo a tu puerta, sin que tengas que salir. Solo pedís por nuestra App y listo.',
   },
 ]
+
+useSeoMeta({
+  title: 'Terra Orgánico - Productos Libres de Pesticidas y Frescos en Costa Rica',
+  ogTitle: 'Terra Orgánico - De la tierra a su hogar 🌱',
+  description: 'Compra verduras, frutas y productos libres de pesticidas y frescos entregados en tu hogar. 100% sin agrotóxicos. Delivery en Costa Rica.',
+  ogDescription: 'Verduras y frutas orgánicas frescas recién cosechadas, entregadas a tu puerta en Costa Rica.',
+  ogImage: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Terra Orgánico - Productos Libres de Pesticidas y Frescos en Costa Rica',
+  twitterDescription: 'Frutas y verduras frescas, sin agrotóxicos, delivery en Costa Rica.',
+})
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        'name': 'Terra Orgánico',
+        'description': 'Productos libres de pesticidas y frescos entregados a domicilio en Costa Rica',
+        'url': 'https://terraorganico.com',
+        'logo': 'https://terraorganico.com/logo.png',
+        'contact': {
+          '@type': 'ContactPoint',
+          'telephone': '+506-8853-2344',
+          'contactType': 'Customer Service'
+        },
+        'address': {
+          '@type': 'PostalAddress',
+          'addressCountry': 'CR'
+        }
+      })
+    }
+  ]
+})
 </script>

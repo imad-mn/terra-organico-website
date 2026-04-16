@@ -29,24 +29,27 @@ export interface Testimonio {
     Testimonio: string;
 }
 
-const config = useRuntimeConfig()
-
 async function get<T>(endpoint: string): Promise<T> {
-    const response = await fetch(`${config.public.apiBase}/${endpoint}`);
-    return response.json();
+    const config = useRuntimeConfig();
+    const response = await useFetch(endpoint, {
+        baseURL: config.public.apiBase,
+        key: endpoint,
+        lazy: false,
+    });
+    return response.data.value as T;
 }
 
 export async function obtenerCategorias(): Promise<string[]> {
-    const configuracion = await get<Configuracion>('configuracion');
+    const configuracion = await get<Configuracion>('/configuracion');
     return configuracion.tipoProductos;
 }
 
 export async function obtenerProductos(): Promise<Producto[]> {
-    const conElementos = await get<ConElementos<Producto>>('productos');
+    const conElementos = await get<ConElementos<Producto>>('/productos');
     return conElementos.elementos;
 }
 
 export async function obtenerTestimonios(): Promise<Testimonio[]> {
-    const conElementos = await get<ConElementos<Testimonio>>('testimonios');
+    const conElementos = await get<ConElementos<Testimonio>>('/testimonios');
     return conElementos.elementos;
 }

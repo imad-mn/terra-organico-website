@@ -38,26 +38,6 @@
       </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <!-- <section class="py-10 px-4 bg-primary/5">
-      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="card border-l-4 border-primary">
-          <h3 class="font-heading text-2xl font-bold text-primary mb-3">Misión</h3>
-          <p class="text-dark/70 leading-relaxed">
-            Brindar a las familias costarricenses acceso fácil a productos orgánicos frescos y de calidad,
-            fortaleciendo el vínculo entre el productor local y el consumidor consciente.
-          </p>
-        </div>
-        <div class="card border-l-4 border-accent">
-          <h3 class="font-heading text-2xl font-bold text-accent mb-3">Visión</h3>
-          <p class="text-dark/70 leading-relaxed">
-            Ser la red de distribución de alimentos orgánicos más confiable del país, promoviendo un estilo de vida
-            saludable y un modelo agrícola sostenible para Costa Rica.
-          </p>
-        </div>
-      </div>
-    </section> -->
-
     <!-- Values -->
     <section class="py-10 px-4 bg-primary/5">
       <div class="max-w-5xl mx-auto text-center">
@@ -108,4 +88,12 @@ const values = [
     color: '#3b5f9b',
   },
 ]
+
+useSeoMeta({
+  title: 'Quiénes Somos - Terra Orgánico',
+  ogTitle: 'Conoce la historia de Terra Orgánico',
+  description: 'Descubre la misión de Terra Orgánico: productos orgánicos frescos que nutren a las comunidades. Colaboramos con fincas locales certificadas para garantizar alimentos de la más alta calidad.',
+  ogDescription: 'Estamos comprometidos a transformar la alimentación y la salud a través de productos orgánicos sostenibles.',
+  ogImage: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80',
+})
 </script>

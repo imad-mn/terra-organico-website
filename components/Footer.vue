@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3 flex items-center justify-center gap-2">
+    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3 flex flex-wrap items-center justify-center gap-2">
       <span>© {{ new Date().getFullYear() }} Terra Orgánico. Todos los derechos reservados.</span>
       <span class="flex items-center gap-1">
         Hecho con <UIcon name="heroicons:heart-solid" class="w-3 h-3 text-red-400" /> por

@@ -55,6 +55,14 @@
 <script setup>
 import { ref } from 'vue'
 
+useSeoMeta({
+  title: 'Preguntas Frecuentes - Terra Orgánico',
+  ogTitle: 'Respuestas a tus dudas sobre pedidos y envíos',
+  description: 'Preguntas frecuentes sobre cómo hacer pedidos, entregas, productos orgánicos certificados y formas de pago en Terra Orgánico.',
+  ogDescription: 'Encuentra respuestas a tus dudas sobre productos orgánicos, entregas a domicilio y cómo pedir en Terra Orgánico.',
+  ogImage: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80',
+})
+
 const open = ref(null)
 function toggle(i) {
   open.value = open.value === i ? null : i
@@ -102,4 +110,24 @@ const faqs = [
     answer: 'Los pedidos se toman jueves y viernes. El día límite para cancelar o modificar el pedido es el día sábado.',
   },
 ]
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': faqs.map(faq => ({
+          '@type': 'Question',
+          'name': faq.question,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': faq.answer
+          }
+        }))
+      })
+    }
+  ]
+})
 </script>
