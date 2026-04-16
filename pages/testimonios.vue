@@ -5,9 +5,9 @@
       <p class="text-white/70 text-lg max-w-xl mx-auto">Lo que dicen nuestros clientes</p>
     </section>
 
-    <section class="py-10 px-4">
-      <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    <section class="py-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
           <div
             v-for="(t, i) in testimonios"
             :key="i"
