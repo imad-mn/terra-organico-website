@@ -44,14 +44,14 @@
         </div>
 
         <!-- Product grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           <div
             v-for="prod in filteredProducts"
             :key="prod.id"
             class="card hover:shadow-lg transition-all hover:-translate-y-1 overflow-hidden !p-0"
           >
             <!-- Foto del producto -->
-            <div class="h-40 md:h-44 lg:h-53 overflow-hidden rounded-t-2xl">
+            <div class="h-40 md:h-45 lg:h-50 overflow-hidden rounded-t-2xl">
               <img
                 :src="config.public.imagesBase + '/' + prod.imagen"
                 :alt="prod.nombre"
@@ -60,7 +60,6 @@
             </div>
             <div class="py-2 px-4">
               <h3 class="font-heading font-bold text-lg text-dark">{{ prod.nombre }}</h3>
-              <p class="text-sm text-dark/60 mb-1 leading-relaxed">{{ prod.tipo }}</p>
               <p class="text-accent font-bold text-md">₡{{ prod.precio }} / {{ prod.presentacion }}</p>
             </div>
           </div>
