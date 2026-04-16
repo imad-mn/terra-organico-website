@@ -7,29 +7,9 @@
 
     <section class="py-10 px-4">
       <div class="max-w-4xl mx-auto space-y-6">
-
-        <!-- Controls -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-          <div class="flex flex-wrap gap-2">
-            <button
-              v-for="cat in categories"
-              :key="cat"
-              @click="activeCategory = cat"
-              :class="[
-                'px-4 py-1.5 rounded-full text-sm font-semibold transition-colors',
-                activeCategory === cat
-                  ? 'bg-primary text-white'
-                  : 'bg-white/60 text-dark border border-primary/20 hover:bg-primary/10'
-              ]"
-            >
-              {{ cat }}
-            </button>
-          </div>
-        </div>
-
         <!-- Price table -->
         <div
-          v-for="cat in visibleCategories"
+          v-for="cat in categories"
           :key="cat"
           class="card p-0 overflow-hidden"
         >
@@ -76,13 +56,6 @@ const categories = ref<string[]>([]);
 
 onMounted(async () => {
   products.value = (await obtenerProductos()).sort((a, b) => a.nombre.localeCompare(b.nombre));
-  categories.value = ['Todos', ...(await obtenerCategorias())];
+  categories.value = await obtenerCategorias();
 });
-
-const activeCategory = ref('Todos')
-
-const visibleCategories = computed(() => {
-  if (activeCategory.value === 'Todos') return categories.value.filter(c => c !== 'Todos')
-  return [activeCategory.value]
-})
 </script>

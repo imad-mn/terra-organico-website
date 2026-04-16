@@ -4,7 +4,7 @@
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-3">
         <img src="/logo.png" alt="Terra Orgánico" class="h-12 w-12 rounded-full object-cover" />
-        <span class="text-white font-heading font-bold text-xl leading-tight hidden sm:block">
+        <span class="text-white font-heading font-bold text-xl leading-tight sm:block">
           Terra Orgánico
         </span>
       </NuxtLink>
