@@ -28,7 +28,8 @@ jobs:
             aws-region: us-east-2
 
         - name: Deploy
-          run: aws s3 .output/public s3://terra-organico-website
+          run: aws s3 sync .output/public s3://terra-organico-website
+        
         - name: Invalidate CloudFront
           run: |
             aws cloudfront create-invalidation \
