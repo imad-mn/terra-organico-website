@@ -1,13 +1,8 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  ssr: true,
+  ssr: false,
   modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts'],
   nitro: {
-    preset: "cloudflare_modules",
-    cloudflare: {
-      deployConfig: false,
-      nodeCompat: true
-    },
     prerender: {
       autoSubfolderIndex: false,
       routes: [
@@ -20,6 +15,9 @@ export default defineNuxtConfig({
         '/lista-precios',
       ],
     },
+  },
+  schemaOrg: {
+    enabled: false
   },
   css: ['~/assets/css/main.css'],
   app: {
@@ -89,24 +87,17 @@ export default defineNuxtConfig({
     }
   },
   site: {
-    url: 'https://terraorganico.com',
+    url: 'https://www.terraorganico.com',
     name: 'Terra Orgánico',
     description: 'Productos libres de pesticidas y frescos, de la tierra a su hogar. Deliveries en Costa Rica con variedad de frutas y verduras ecológicas.',
     defaultLocale: 'es',
   },
   ogImage: {
-    fontSubsets: ['Nunito:700'],
-    zeroRuntime: true,
+    enabled: false,
   },
   robots: {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin'],
-        crawlDelay: 0,
-      },
-    ],
+    allow: '/',
+    disallow: ['/admin'],
   },
   sitemap: {
     urls: async () => {

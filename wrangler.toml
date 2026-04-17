@@ -1,6 +1,0 @@
-# wrangler.toml
-name = "terra-organico-website"
-compatibility_date = "2024-09-19"
-
-[assets]
-directory = ".output/public"

@@ -131,8 +131,8 @@ useHead({
         '@type': 'LocalBusiness',
         'name': 'Terra Orgánico',
         'description': 'Productos libres de pesticidas y frescos entregados a domicilio en Costa Rica',
-        'url': 'https://terraorganico.com',
-        'logo': 'https://terraorganico.com/logo.png',
+        'url': 'https://www.terraorganico.com',
+        'logo': 'https://www.terraorganico.com/logo.png',
         'contact': {
           '@type': 'ContactPoint',
           'telephone': '+506-8853-2344',

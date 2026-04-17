@@ -15,7 +15,7 @@ There are no tests or linting scripts configured.
 
 ## Architecture
 
-Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`). Running `npm run build` (`nuxt generate`) produces one HTML file per route in `.output/public/`. The output can be deployed to any static host without server-side configuration.
+Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`). Running `npm run build` produces one HTML file per route in `.output/public/`. The output can be deployed to any static host without server-side configuration. Schema.org is disabled (`seo.schemaOrg.enabled: false`) to reduce page weight in SSG mode.
 
 **File-based routing via `pages/`.** Each `.vue` file in `pages/` maps directly to a URL:
 

@@ -13,8 +13,8 @@ useHead({
     { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
   ],
   link: [
-    { rel: 'canonical', href: 'https://terraorganico.com' },
-    { rel: 'alternate', hrefLang: 'es', href: 'https://terraorganico.com' },
+    { rel: 'canonical', href: 'https://www.terraorganico.com' },
+    { rel: 'alternate', hrefLang: 'es', href: 'https://www.terraorganico.com' },
   ]
 })
 </script>

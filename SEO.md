@@ -9,7 +9,7 @@ Este documento describe la configuración de SEO implementada en Terra Orgánico
 ## Configuración global (nuxt.config.ts)
 
 ### Site Configuration
-- **URL**: https://terraorganico.com
+- **URL**: https://www.terraorganico.com
 - **Nombre**: Terra Orgánico
 - **Locale**: es (Español)
 - **Descripción global**: Productos libres de pesticidas y frescos, de la tierra a su hogar. Deliveries en Costa Rica con variedad de frutas y verduras ecológicas.
@@ -78,8 +78,8 @@ Cada página incluye `useSeoMeta()` con:
 Tipo: LocalBusiness
 - name: Terra Orgánico
 - description: Productos libres de pesticidas y frescos
-- url: https://terraorganico.com
-- logo: https://terraorganico.com/logo.png
+- url: https://www.terraorganico.com
+- logo: https://www.terraorganico.com/logo.png
 - phone: +506-8853-2344
 - address: Costa Rica
 
@@ -148,6 +148,6 @@ Después de ejecutar `npm run build`, se generarán en `.output/public/`:
 
 - **Imagen OG**: Todas las páginas usan una imagen de Unsplash optimizada como preview social
 - **Idioma**: Configurado a español (es) para Costa Rica (es_CR)
-- **URL Canónica**: Se genera automáticamente con https://terraorganico.com
+- **URL Canónica**: Se genera automáticamente con https://www.terraorganico.com
 - **Twitter**: Incluye Card type para mejor vista en Twitter/X
 
