@@ -5,13 +5,13 @@
       <p class="text-white/70 text-lg max-w-xl mx-auto">Precios vigentes — actualizados semanalmente</p>
     </section>
 
-    <section class="py-10 px-4">
+    <section class="py-8 px-3">
       <div class="max-w-4xl mx-auto space-y-6">
         <!-- Price table -->
         <div
           v-for="cat in categories"
           :key="cat"
-          class="card p-0 overflow-hidden"
+          class="card !px-3 overflow-hidden"
         >
           <div class="bg-primary px-3 py-3">
             <h3 class="font-heading font-bold text-white text-lg">{{ cat }}</h3>
@@ -19,9 +19,9 @@
           <table class="w-full text-sm">
             <thead>
               <tr class="border-b border-primary/10 bg-primary/5">
-                <th class="text-left px-3 py-3 font-semibold text-dark/60">Producto</th>
-                <th class="text-left px-3 py-3 font-semibold text-dark/60">Presentación</th>
-                <th class="text-right px-3 py-3 font-semibold text-dark/60">Precio</th>
+                <th class="text-left px-2 py-3 font-semibold text-dark/60">Producto</th>
+                <th class="text-left px-2 py-3 font-semibold text-dark/60">Presentación</th>
+                <th class="text-right px-2 py-3 font-semibold text-dark/60">Precio</th>
               </tr>
             </thead>
             <tbody>
@@ -31,9 +31,9 @@
                 :class="i % 2 === 0 ? 'bg-white/40' : 'bg-white/10'"
                 class="border-b border-primary/5 last:border-0"
               >
-                <td class="px-3 py-3 font-medium text-dark">{{ item.nombre }}</td>
-                <td class="px-3 py-3 text-dark/60">{{ item.presentacion }}</td>
-                <td class="px-3 py-3 text-right font-bold text-accent">₡{{ item.precio }}</td>
+                <td class="px-2 py-3 font-medium text-dark">{{ item.nombre }}</td>
+                <td class="px-2 py-3 text-dark/60">{{ item.presentacion }}</td>
+                <td class="px-2 py-3 text-right font-bold text-accent">₡{{ item.precio }}</td>
               </tr>
             </tbody>
           </table>

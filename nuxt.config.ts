@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         '/productos',
         '/testimonios',
         '/preguntas-frecuentes',
+        '/glosario',
         '/costos-envio',
         '/lista-precios',
       ],
@@ -107,6 +108,7 @@ export default defineNuxtConfig({
         { loc: '/productos', changefreq: 'weekly', priority: 0.9 },
         { loc: '/testimonios', changefreq: 'monthly', priority: 0.7 },
         { loc: '/preguntas-frecuentes', changefreq: 'monthly', priority: 0.8 },
+        { loc: '/glosario', changefreq: 'monthly', priority: 0.7 },
         { loc: '/costos-envio', changefreq: 'monthly', priority: 0.7 },
         { loc: '/lista-precios', changefreq: 'weekly', priority: 0.8 },
       ];

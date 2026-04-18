@@ -70,6 +70,7 @@ const links = [
   { to: '/productos',            label: 'Productos' },
   { to: '/testimonios',          label: 'Testimonios' },
   { to: '/preguntas-frecuentes', label: 'Preguntas Frecuentes' },
+  { to: '/glosario',             label: 'Glosario' },
   { to: '/costos-envio',         label: 'Envíos' },
   { to: '/lista-precios',        label: 'Precios' },
 ]
