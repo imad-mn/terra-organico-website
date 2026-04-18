@@ -3,6 +3,9 @@ on: [push]
 permissions:
   id-token: write   # Requerido para OIDC
   contents: read  # Requerido para checkout
+env:
+  NUXT_PUBLIC_API_BASE: ${{ vars.NUXT_PUBLIC_API_BASE }}
+  NUXT_PUBLIC_IMAGES_BASE: ${{ vars.NUXT_PUBLIC_IMAGES_BASE }}
 jobs:
   deploy:
     runs-on: ubuntu-latest
