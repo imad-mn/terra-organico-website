@@ -19,7 +19,7 @@
             <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" /> Ruta San José (Entrega todos los martes)
           </h2>
           <p class="text-dark/60 mb-4">Tres Ríos, Curridabat, San Pedro, Tibás, San José Centro, Escazú, Santa Ana.</p>
-          <div class="card overflow-x-auto w-md mx-auto">
+          <div class="card overflow-x-auto w-full md:w-md mx-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
@@ -53,7 +53,7 @@
             <span>Ruta Cartago o Desamparados (Entrega martes por medio)</span>
           </h2>
           <p class="text-dark/60 mb-4">Una semana para Cartago, Paraíso y la otra para Desamparados.</p>
-          <div class="card overflow-x-auto w-md mx-auto">
+          <div class="card overflow-x-auto w-full md:w-md mx-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
@@ -86,7 +86,7 @@
             <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" /> Ruta Heredia (Entrega todos los miércoles)
           </h2>
           <p class="text-dark/60 mb-4">Coronado, Moravia y Heredia.</p>
-          <div class="card overflow-x-auto w-md mx-auto">
+          <div class="card overflow-x-auto w-full md:w-md mx-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
