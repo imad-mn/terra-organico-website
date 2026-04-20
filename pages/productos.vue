@@ -1,17 +1,8 @@
 <template>
   <div>
-    <!-- Hero con foto -->
-    <section class="relative py-16 px-4 text-center text-white overflow-hidden">
-      <img
-        src="https://images.unsplash.com/photo-1510629954389-c1e0da47d414?auto=format&fit=crop&w=1600&q=80"
-        alt="Canasta de verduras orgánicas"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-      <div class="absolute inset-0" style="background: rgba(45,106,45,0.78)"></div>
-      <div class="relative z-10">
-        <h1 class="text-4xl md:text-5xl font-heading font-bold mb-3">Nuestros Productos</h1>
-        <p class="text-white/80 text-lg max-w-xl mx-auto">Frescos, libres de pesticidas y cultivados con mucho cariño</p>
-      </div>
+    <section class="page-hero">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold mb-3">Nuestros Productos</h1>
+      <p class="text-white/70 text-lg max-w-xl mx-auto">Frescos, libres de pesticidas y cultivados con mucho cariño</p>
     </section>
 
     <section class="py-10 px-2">

@@ -6,7 +6,7 @@
     </section>
 
     <section class="py-8 px-3">
-      <div class="max-w-4xl mx-auto space-y-6">
+      <div class="max-w-xl mx-auto space-y-6">
         <!-- Price table -->
         <div
           v-for="cat in categories"

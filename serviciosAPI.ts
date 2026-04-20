@@ -31,10 +31,14 @@ export interface Testimonio {
 
 async function get<T>(endpoint: string): Promise<T> {
     const config = useRuntimeConfig();
+    const nuxtApp = useNuxtApp()
+
     const response = await useFetch(endpoint, {
         baseURL: config.public.apiBase,
         key: endpoint,
-        lazy: false,
+        getCachedData(key) {
+            return nuxtApp.payload.data[key] || nuxtApp.static.data[key]
+        }
     });
     return response.data.value as T;
 }

@@ -5,7 +5,7 @@
       <div class="flex flex-col items-start gap-3">
         <img src="/logo.webp" alt="Terra Orgánico" class="h-15 w-15 rounded-full object-cover" />
         <p class="font-heading text-lg text-white font-semibold">Terra Orgánico</p>
-        <p class="text-sm italic text-white/60">De la tierra a su hogar 🌱</p>
+        <p class="text-sm italic text-white/75">De la tierra a su hogar 🌱</p>
       </div>
 
       <!-- Contact -->
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="border-t border-white/10 text-center text-xs text-white/40 py-3 flex flex-wrap items-center justify-center gap-2">
+    <div class="border-t border-white/10 text-center text-xs text-white/60 py-3 flex flex-wrap items-center justify-center gap-2">
       <span>© {{ new Date().getFullYear() }} Terra Orgánico. Todos los derechos reservados.</span>
       <span class="flex items-center gap-1">
         Hecho con <UIcon name="heroicons:heart-solid" class="w-3 h-3 text-red-400" /> por

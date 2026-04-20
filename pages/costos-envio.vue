@@ -6,7 +6,7 @@
     </section>
 
     <section class="py-10 px-4">
-      <div class="max-w-4xl mx-auto space-y-8">
+      <div class="max-w-3xl mx-auto space-y-8">
 
         <!-- Aviso toma de pedidos -->
         <h2 class="font-heading text-3xl font-bold text-dark text-center">
@@ -19,7 +19,7 @@
             <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" /> Ruta San José (Entrega todos los martes)
           </h2>
           <p class="text-dark/60 mb-4">Tres Ríos, Curridabat, San Pedro, Tibás, San José Centro, Escazú, Santa Ana.</p>
-          <div class="card overflow-x-auto p-0">
+          <div class="card overflow-x-auto w-md mx-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
@@ -53,7 +53,7 @@
             <span>Ruta Cartago o Desamparados (Entrega martes por medio)</span>
           </h2>
           <p class="text-dark/60 mb-4">Una semana para Cartago, Paraíso y la otra para Desamparados.</p>
-          <div class="card overflow-x-auto p-0">
+          <div class="card overflow-x-auto w-md mx-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
@@ -86,7 +86,7 @@
             <UIcon name="heroicons:truck" class="w-8 h-8 flex-shrink-0" /> Ruta Heredia (Entrega todos los miércoles)
           </h2>
           <p class="text-dark/60 mb-4">Coronado, Moravia y Heredia.</p>
-          <div class="card overflow-x-auto p-0">
+          <div class="card overflow-x-auto w-md mx-auto">
             <table class="w-full text-sm">
               <thead>
                 <tr class="bg-primary text-white">
