@@ -63,7 +63,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
-        { rel: 'apple-touch-icon', href: '/logo.png' },
+        { rel: 'apple-touch-icon', href: '/logo.webp' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {

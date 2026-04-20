@@ -12,7 +12,7 @@
       <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(26,74,26,0.82) 0%, rgba(45,106,45,0.75) 50%, rgba(74,124,63,0.70) 100%)"></div>
 
       <div class="relative z-10 px-4 max-w-3xl mx-auto">
-        <img src="/logo.png" alt="Terra Orgánico" class="h-24 w-24 mx-auto rounded-full object-cover shadow-2xl mb-6 border-4 border-white/30" />
+        <img src="/logo.webp" alt="Terra Orgánico" class="h-30 w-30 mx-auto shadow-2xl mb-6" />
         <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-4 leading-tight drop-shadow-lg">
           Terra Orgánico
         </h1>
@@ -68,7 +68,7 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="relative py-30 px-4 text-center text-white overflow-hidden">
+    <section class="relative py-31 px-4 text-center text-white overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1600&q=80"
         alt="Frutas y verduras frescas"
@@ -132,7 +132,7 @@ useHead({
         'name': 'Terra Orgánico',
         'description': 'Productos libres de pesticidas y frescos entregados a domicilio en Costa Rica',
         'url': 'https://www.terraorganico.com',
-        'logo': 'https://www.terraorganico.com/logo.png',
+        'logo': 'https://www.terraorganico.com/logo.webp',
         'contact': {
           '@type': 'ContactPoint',
           'telephone': '+506-8853-2344',

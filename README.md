@@ -64,7 +64,7 @@ Los datos de productos, precios, zonas de envío y testimonios se encuentran com
 ```
 terra-organico-website/
 ├── public/
-│   └── logo.png
+│   └── logo.webp
 ├── assets/
 │   └── css/
 │       └── main.css          ← tokens de marca + clases utilitarias

@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Brand -->
       <div class="flex flex-col items-start gap-3">
-        <img src="/logo.png" alt="Terra Orgánico" class="h-16 w-16 rounded-full object-cover" />
+        <img src="/logo.webp" alt="Terra Orgánico" class="h-15 w-15 rounded-full object-cover" />
         <p class="font-heading text-lg text-white font-semibold">Terra Orgánico</p>
         <p class="text-sm italic text-white/60">De la tierra a su hogar 🌱</p>
       </div>

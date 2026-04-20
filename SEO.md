@@ -79,7 +79,7 @@ Tipo: LocalBusiness
 - name: Terra Orgánico
 - description: Productos libres de pesticidas y frescos
 - url: https://www.terraorganico.com
-- logo: https://www.terraorganico.com/logo.png
+- logo: https://www.terraorganico.com/logo.webp
 - phone: +506-8853-2344
 - address: Costa Rica
 

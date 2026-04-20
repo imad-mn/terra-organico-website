@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-3">
-        <img src="/logo.png" alt="Terra Orgánico" class="h-12 w-12 rounded-full object-cover" />
+        <img src="/logo.webp" alt="Terra Orgánico" class="h-10 w-10 object-cover" />
         <span class="text-white font-heading font-bold text-xl leading-tight sm:block">
           Terra Orgánico
         </span>
