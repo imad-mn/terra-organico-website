@@ -41,7 +41,7 @@ Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`)
 
 **Images** are loaded from Unsplash CDN (`https://images.unsplash.com/photo-{id}?auto=format&fit=crop&w=…&q=80`). Hero sections use full-width background images with a colored overlay (`absolute inset-0`). Product cards use `h-48 overflow-hidden` image thumbnails. Text over images uses `drop-shadow-lg` or inline `text-shadow` for legibility.
 
-**Tone** is casual and warm (tuteo, emojis in nav labels and headings). Navbar links include emojis: 🏠 Inicio, 👥 Quiénes somos, 🥦 Productos, ⭐ Testimonios, ❓ Preguntas Frecuentes, 🚚 Envíos, 🏷️ Precios.
+**Tone** is casual and warm (tuteo, emojis in nav labels and headings). Navbar links should not include emojis.
 
 ## Brand
 
@@ -59,6 +59,18 @@ Fonts: **Nunito** (`font-heading`) + **Nunito Sans** (`font-body`), loaded from 
 
 - Logo is served from `public/logo.webp`.
 - WhatsApp number used throughout: **+506 8853-2344** (`https://wa.me/50686394271`).
-- The `lista-precios.vue` print button calls `window.print()`; print styles are in a `<style>` block at the bottom of that file.
 - Scroll-to-top on navigation is handled automatically by Nuxt.
 - All prerendered routes are explicitly listed in `nuxt.config.ts` under `nitro.prerender.routes`.
+
+## Approach
+- Think before acting. Read existing files before writing code.
+- Be concise in output but thorough in reasoning.
+- Prefer editing over rewriting whole files.
+- Do not re-read files you have already read unless the file may have changed.
+- Skip files over 100KB unless explicitly required.
+- Suggest running /cost when a session is running long to monitor cache ratio.
+- Recommend starting a new session when switching to an unrelated task.
+- Test your code before declaring done.
+- No sycophantic openers or closing fluff.
+- Keep solutions simple and direct.
+- User instructions always override this file.
