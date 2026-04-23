@@ -82,7 +82,7 @@
           <NuxtLink to="/lista-precios" class="bg-white text-accent font-bold px-8 py-3 rounded-full hover:bg-white/90 transition-colors shadow-lg">
             Ver Lista de Precios
           </NuxtLink>
-          <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm">
+          <a :href="`https://wa.me/50686394271?text=${encodeURIComponent('Hola, quiero hacer un pedido.')}`" target="_blank" rel="noopener" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/15 transition-colors flex items-center justify-center gap-2 backdrop-blur-sm">
             <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />Realizar el proceso de Pedido
           </a>
         </div>

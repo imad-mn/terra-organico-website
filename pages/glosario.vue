@@ -20,7 +20,7 @@
 
         <div class="mt-12 card text-center">
           <p class="text-dark/70 mb-4">¿Tienes preguntas sobre nuestros productos?</p>
-          <a href="https://wa.me/50686394271" target="_blank" rel="noopener" class="btn-primary">
+          <a :href="`https://wa.me/50686394271?text=${encodeURIComponent('Hola, quiero hacer una pregunta sobre sus productos.')}`" target="_blank" rel="noopener" class="btn-primary">
             <div class="inline-flex items-center gap-2">
               <UIcon name="simple-icons:whatsapp" class="w-5 h-5" />
               <span>Contactar por WhatsApp</span>
