@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   ssr: false,
-  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts'],
+  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts', '@nuxt/scripts', 'nuxt-meta-pixel'],
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
@@ -119,4 +119,15 @@ export default defineNuxtConfig({
       },
     },
   },
+  metapixel: {
+    default: { id: '1240764237882303' },
+  },
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: 'G-LND7DT00SZ', 
+        trigger: 'onNuxtReady',
+      }
+    }
+  }
 })

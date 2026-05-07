@@ -10,9 +10,11 @@
   },
   "devDependencies": {
     "@nuxt/fonts": "^0.14.0",
+    "@nuxt/scripts": "^1.0.6",
     "@nuxt/ui": "^4.6.1",
     "autoprefixer": "^10.5.0",
     "nuxt": "^4.4.2",
+    "nuxt-meta-pixel": "^2.0.2",
     "postcss": "^8.5.10"
   },
   "dependencies": {
