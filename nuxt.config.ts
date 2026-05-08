@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   ssr: false,
-  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts', '@nuxt/scripts', 'nuxt-meta-pixel'],
+  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts', '@nuxt/scripts'],
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
@@ -71,6 +71,18 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap',
         },
       ],
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-LND7DT00SZ',
+          async: true,
+        },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-LND7DT00SZ');`,
+        },
+      ],
     },
   },
   vite: {
@@ -119,13 +131,10 @@ export default defineNuxtConfig({
       },
     },
   },
-  metapixel: {
-    default: { id: '1240764237882303' },
-  },
   scripts: {
     registry: {
-      googleAnalytics: {
-        id: 'G-LND7DT00SZ', 
+      metaPixel: {
+        id: '1240764237882303', 
         trigger: 'onNuxtReady',
       }
     }
