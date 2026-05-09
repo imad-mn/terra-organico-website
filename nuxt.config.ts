@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   ssr: false,
-  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts', '@nuxt/scripts'],
+  modules: ['@nuxt/ui', '@nuxtjs/seo', '@nuxt/fonts'],
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
@@ -82,7 +82,26 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-LND7DT00SZ');`,
         },
+        {
+          innerHTML: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1240764237882303');
+            fbq('track', 'PageView');`,
+        }
       ],
+      noscript:  [
+        {
+          innerHTML: `<img height="1" width="1" style="display:none"
+                      src="https://www.facebook.com/tr?id=1240764237882303&ev=PageView&noscript=1" />`
+        }
+      ]
     },
   },
   vite: {

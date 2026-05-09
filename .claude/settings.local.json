@@ -6,7 +6,9 @@
       "mcp__plugin_playwright_playwright__browser_evaluate",
       "mcp__plugin_playwright_playwright__browser_navigate",
       "mcp__plugin_playwright_playwright__browser_close",
-      "mcp__plugin_playwright_playwright__browser_press_key"
+      "mcp__plugin_playwright_playwright__browser_press_key",
+      "Bash(xargs grep -l \"useScript\\\\|fbq\")",
+      "Bash(xargs grep -l \"metaPixel\\\\|useScriptMetaPixel\")"
     ]
   }
 }
