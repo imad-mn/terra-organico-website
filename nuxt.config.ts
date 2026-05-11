@@ -60,6 +60,10 @@ export default defineNuxtConfig({
           name: 'twitter:site',
           content: '@terraorganico',
         },
+        {
+          name: 'facebook-domain-verification',
+          content: 'f6xqfy9dawfmbhzdbr9ew75wtyxcdk',
+        },
       ],
       link: [
         { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
