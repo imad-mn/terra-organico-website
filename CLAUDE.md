@@ -27,9 +27,12 @@ Static site built with **Nuxt 3** in SSG mode (`ssr: false` + `nitro.prerender`)
 | `pages/testimonios.vue` | `/testimonios` |
 | `pages/preguntas-frecuentes.vue` | `/preguntas-frecuentes` |
 | `pages/costos-envio.vue` | `/costos-envio` |
+| `pages/glosario.vue` | `/glosario` |
 | `pages/lista-precios.vue` | `/lista-precios` |
 
 **Data lives in the pages.** Each page component contains its own data as a plain JS array in `<script setup>` — there is no store, no API, and no external data source. To update products, prices, delivery zones, or testimonials, edit the relevant array directly in the corresponding page file.
+
+**`serviciosAPI.ts` is an optional external API layer.** It exports typed interfaces (`Producto`, `Testimonio`, `Configuracion`) and async fetch helpers (`obtenerProductos`, `obtenerTestimonios`, `obtenerCategorias`) backed by `NUXT_PUBLIC_API_BASE`. When that env var is set, pages can call these instead of using hardcoded arrays. The fetches use `useFetch` with SSG payload caching so data is embedded in the static build.
 
 **Layout** is in `layouts/default.vue` (Navbar + `<slot />` + Footer + floating WhatsApp button). `app.vue` is just a thin `<NuxtLayout><NuxtPage /></NuxtLayout>` shell. The nav link list lives in `components/Navbar.vue` — the Footer no longer duplicates it (it was simplified to brand + contact only). Components are auto-imported by Nuxt.
 
